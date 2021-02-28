@@ -16,6 +16,7 @@
 | ------------------- | ------- | ------------------------- |
 | name 名前            | string  | null: false               |
 | uid  ログインID      | string  | null: false, unique: true |
+| email  メールアドレス | string  | null: false, unique: true |
 | encrypted_password  | string  | null: false               |
 
 
