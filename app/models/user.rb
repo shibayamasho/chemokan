@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
     UID_REGEX = /\A[a-z0-9]+\z/
     validates :uid, format: { with: UID_REGEX },
-                    niqueness: true,
+                    uniqueness: true,
                     length: { minimum: 8 }
   end
 end
