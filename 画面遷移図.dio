@@ -1,4 +1,4 @@
-<mxfile host="65bd71144e" modified="2021-03-01T03:15:46.773Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="xRfl01HULax8ijQ7qqeU" type="embed">
+<mxfile host="65bd71144e" modified="2021-03-01T03:19:43.546Z" agent="5.0 (Macintosh; Intel Mac OS X 11_2_1) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.53.2 Chrome/87.0.4280.141 Electron/11.2.1 Safari/537.36" version="14.2.4" etag="81mCXHfWxBF8cnMgQhFQ" type="embed">
     <diagram id="_gqEtZB6_dUktbeQtSIE" name="ページ1">
         <mxGraphModel dx="898" dy="529" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#F4F1DE" math="0" shadow="0">
             <root>
@@ -41,7 +41,7 @@
                     <mxGeometry y="30" width="120" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="患者詳細" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
-                    <mxGeometry x="200" y="280" width="160" height="120" as="geometry"/>
+                    <mxGeometry x="240" y="280" width="160" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="12" value="該当患者の治療一覧を表示&#10;治療詳細&#10;患者削除" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#393C56;" vertex="1" parent="11">
                     <mxGeometry y="30" width="160" height="90" as="geometry"/>
@@ -52,7 +52,7 @@
                         <mxPoint x="520" y="290" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="14" value="" style="endArrow=none;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#F4F1DE;strokeColor=#E07A5F;fontColor=#393C56;" edge="1" parent="1" source="4" target="11">
+                <mxCell id="14" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#F4F1DE;strokeColor=#E07A5F;fontColor=#393C56;" edge="1" parent="1" source="4" target="11">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="360" y="290" as="sourcePoint"/>
                         <mxPoint x="320" y="270" as="targetPoint"/>
@@ -67,7 +67,7 @@
                 <mxCell id="16" value="レジメン一覧" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
                     <mxGeometry x="520" y="40" width="160" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="17" value="レジメン詳細&#10;レジメン新規登録" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#393C56;" vertex="1" parent="16">
+                <mxCell id="17" value="レジメン詳細&#10;レジメン新規登録&#10;検索" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#393C56;" vertex="1" parent="16">
                     <mxGeometry y="30" width="160" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="レジメン詳細" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
@@ -95,18 +95,18 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="28" value="レジメン新規登録" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
-                    <mxGeometry x="720" y="200" width="160" height="120" as="geometry"/>
+                    <mxGeometry x="827" y="200" width="160" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="29" value="新規登録後は&#10;レジメン詳細へ" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#393C56;" vertex="1" parent="28">
                     <mxGeometry y="30" width="160" height="90" as="geometry"/>
                 </mxCell>
-                <mxCell id="32" value="" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#F4F1DE;strokeColor=#E07A5F;fontColor=#393C56;" edge="1" parent="1" source="28" target="20">
+                <mxCell id="32" value="" style="endArrow=none;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;labelBackgroundColor=#F4F1DE;strokeColor=#E07A5F;fontColor=#393C56;" edge="1" parent="1" source="28" target="20">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="710" y="220" as="sourcePoint"/>
                         <mxPoint x="870" y="220" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="33" value="" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#F4F1DE;strokeColor=#E07A5F;fontColor=#393C56;" edge="1" parent="1" source="17" target="28">
+                <mxCell id="33" value="" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;labelBackgroundColor=#F4F1DE;strokeColor=#E07A5F;fontColor=#393C56;" edge="1" parent="1" source="17" target="28">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="710" y="220" as="sourcePoint"/>
                         <mxPoint x="870" y="220" as="targetPoint"/>
@@ -173,19 +173,19 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="53" value="疾患一覧" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
-                    <mxGeometry x="840" y="360" width="160" height="120" as="geometry"/>
+                    <mxGeometry x="760" y="360" width="160" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="54" value="疾患新規登録&#10;疾患編集&#10;疾患削除" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#393C56;" vertex="1" parent="53">
+                <mxCell id="54" value="疾患新規登録&#10;疾患編集&#10;疾患削除&#10;検索" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#393C56;" vertex="1" parent="53">
                     <mxGeometry y="30" width="160" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="56" value="疾患新規登録" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
-                    <mxGeometry x="1080" y="360" width="160" height="120" as="geometry"/>
+                    <mxGeometry x="960" y="360" width="160" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="57" value="疾患新規登録後は&#10;疾患一覧へ" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#393C56;" vertex="1" parent="56">
                     <mxGeometry y="30" width="160" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="59" value="疾患編集" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;fillColor=#F2CC8F;strokeColor=#E07A5F;fontColor=#393C56;" vertex="1" parent="1">
-                    <mxGeometry x="840" y="560" width="160" height="120" as="geometry"/>
+                    <mxGeometry x="840" y="520" width="160" height="120" as="geometry"/>
                 </mxCell>
                 <mxCell id="60" value="疾患編集後は&#10;疾患一覧へ" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;fontColor=#393C56;" vertex="1" parent="59">
                     <mxGeometry y="30" width="160" height="90" as="geometry"/>
@@ -203,9 +203,9 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="65" value="&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;※レジメン画面から&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;関連の疾患を&lt;/span&gt;&lt;span&gt;選択する&lt;/span&gt;&lt;/div&gt;" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;sketch=0;strokeColor=#E07A5F;fillColor=#F2CC8F;fontColor=#393C56;" vertex="1" parent="1">
-                    <mxGeometry x="520" y="320" width="160" height="100" as="geometry"/>
+                    <mxGeometry x="600" y="200" width="160" height="100" as="geometry"/>
                 </mxCell>
-                <mxCell id="70" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#E07A5F;fillColor=#F2CC8F;fontColor=#393C56;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="65" target="54">
+                <mxCell id="70" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#E07A5F;fillColor=#F2CC8F;fontColor=#393C56;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="65" target="53">
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="800" y="340" as="sourcePoint"/>
                         <mxPoint x="960" y="340" as="targetPoint"/>
@@ -227,6 +227,12 @@
                     <mxGeometry relative="1" as="geometry">
                         <mxPoint x="400" y="520" as="sourcePoint"/>
                         <mxPoint x="560" y="520" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="75" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#E07A5F;fillColor=#F2CC8F;fontColor=#393C56;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="4" target="54">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="590" y="300" as="sourcePoint"/>
+                        <mxPoint x="750" y="300" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
             </root>
