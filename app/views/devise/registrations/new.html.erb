@@ -5,12 +5,12 @@
 
     <div class="field">
     <%= f.label :"ユーザーID(必須 半角英数字８文字以上)" %><br />
-    <%= f.email_field :uid, autofocus: true, autocomplete: "uid" %>
+    <%= f.text_field :uid, autofocus: true, autocomplete: "uid" %>
   </div>
 
     <div class="field">
     <%= f.label :"名前(必須)" %><br />
-    <%= f.email_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
   </div>
 
   <div class="field">
