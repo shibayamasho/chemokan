@@ -12,4 +12,7 @@ class User < ApplicationRecord
                     uniqueness: true,
                     length: { minimum: 8 }
   end
+
+  PASSWORD_REGEX = /\A[a-zA-Z0-9]+\z/
+  validates :password, format: { with: PASSWORD_REGEX }
 end
