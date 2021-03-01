@@ -83,9 +83,9 @@
 | ------------------------- | ---------- | ---------------------------- |
 | date 日付                  | date      | null: false                   |
 | in_out_id 入院外来         | integer    | null: false                   |
-| patient_id 患者           | references | null: false, foreginkey: true |
-| disease_id 疾患           | references | null: false, foreginkey: true |
-| regimen_id レジメン        | references | null: false, foreginkey: true |
+| patient_id 患者           | references | null: false, foreignkey: true |
+| disease_id 疾患           | references | null: false, foreignkey: true |
+| regimen_id レジメン        | references | null: false, foreignkey: true |
 | course コース数            | integer    | null: false                   |
 | day コース内日数            | integer    | null: false                   |
 | measuring_date 測定日      | date       | null: false                   |
