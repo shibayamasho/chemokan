@@ -4,9 +4,9 @@
   <% @patients.each do |patient| %>
     <p> ---------- </p>
     <a class="patient-name"><%= patient.name %></a>
-    <a class="patient-gender"><%= patient.gender.name %></a><br />
+    <a class="patient-gender">　　性別：<%= patient.gender.name %></a><br />
     <div class="patient-birthday">
-      <%= patient.birthday %>
+      生年月日：<%= patient.birthday %>　　年齢：<%= ((Date.today.strftime("%Y%m%d").to_i - patient.birthday.strftime("%Y%m%d").to_i) / 10000) %>
     </div>
     <%= link_to "詳細", patient_path(patient.id) %>
   <% end %>
