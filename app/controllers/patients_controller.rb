@@ -15,7 +15,8 @@ class PatientsController < ApplicationController
   def create
     @patient = Patient.new(patient_params)
     if @patient.save
-      redirect_to patients_path
+      patient2 = Patient.find_by(name: @patient[:name], gender_id: @patient[:gender_id], birthday: @patient[:birthday], text: @patient[:text])
+      redirect_to patient_path(patient2.id)
     else
       render :new
     end
