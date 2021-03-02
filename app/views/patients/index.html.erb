@@ -1,0 +1,13 @@
+<h1>患者一覧</h1>
+<%= link_to '患者新規登録', new_patient_path %>
+<div class="patients">
+  <% @patients.each do |patient| %>
+    <p> ---------- </p>
+    <a class="patient-name"><%= patient.name %></a>
+    <a class="patient-gender">　　性別：<%= patient.gender.name %></a><br />
+    <div class="patient-birthday">
+      生年月日：<%= patient.birthday %>　　年齢：<%= ((Date.today.strftime("%Y%m%d").to_i - patient.birthday.strftime("%Y%m%d").to_i) / 10000) %>
+    </div>
+    <%= link_to "詳細", patient_path(patient.id) %>
+  <% end %>
+</div>
