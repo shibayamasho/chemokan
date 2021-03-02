@@ -1,0 +1,22 @@
+<h1>患者 詳細</h1>
+<div class="patient-info">
+  <div class="patient-name">
+    <p>患者名： <%= @patient.name %></p>
+  </div>
+  <div class="patient-gender">
+    <p>性別： <%= @patient.gender.name %></p>
+  </div>
+  <div class="patient-birthday">
+    <p>生年月日： <%= @patient.birthday %></p>
+  </div>
+  <div class="patient-text">
+    <p>その他患者情報<p>
+    <%= @patient.text %>
+  </div>
+</div>
+<div class="patient-edit">
+  <%= link_to "編集", edit_patient_path(@patient.id) %>
+</div>
+<div class="patient-destroy">
+  <%= link_to "削除", patient_path(@patient.id), method: :delete %>
+</div>
