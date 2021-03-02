@@ -2,15 +2,15 @@
   <%= render 'shared/error_messages', model: f.object %>
   <div class="form-wrap">
     <div class="patient-name">
-      <p>患者名(イニシャル：半角英大文字２文字)</p>
+      <p>患者名(必須　イニシャル：半角英大文字２文字)</p>
       <%= f.text_field :name, id:"patient-name", placeholder:"イニシャル(半角英大文字2文字)", maxlength:"2" %>
     </div>
     <div>
-      <p>性別</p>
+      <p>性別（必須）</p>
       <%= f.collection_select(:gender_id, Gender.all, :id, :name, {}, {class:"select-box", id:"patient-gender"}) %>
     </div>
     <div class="input-birth-wrap">
-      <p>生年月日</p>
+      <p>生年月日（必須）</p>
       <%= raw sprintf(
         f.date_select(
           :birthday,
@@ -24,7 +24,7 @@
         "<a> 年 </a><br />", "<a> 月 </a><br />") + "<a> 日 </a><br />" %>
     </div>
     <div>
-      <p>その他患者情報<p>
+      <p>その他患者情報（任意）<p>
       <%= f.text_area :text, id:"patient-text", placeholder:"患者情報を入力してください" %>
     </div>
     <div>
