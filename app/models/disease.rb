@@ -9,7 +9,7 @@ class Disease < ApplicationRecord
     validates :cancer_id
     validates :purpose_id
     end
-    validates :other_id
+    validates :other_id, numericality: true
   end
 
   # has_many :regimens, through: disease_regimens
