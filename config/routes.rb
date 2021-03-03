@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   root to: "treatments#index"
   resources :treatments, only: [:index]
   resources :patients
-  resources :diseases
+  resources :diseases, only: [:index, :create, :edit, :update, :destroy]
 end
