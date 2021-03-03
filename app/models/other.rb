@@ -3,9 +3,9 @@ class Other < ActiveHash::Base
     { id: 1, name: '--' },
     { id: 2, name: 'HER2(+)' },
     { id: 3, name: 'HER2(-)' },
-    { id: 4, name: 'EGFRmu(+)' }
-    { id: 5, name: 'EGFRmu(-)' }
-    { id: 6, name: 'その他' },
+    { id: 4, name: 'EGFRmu(+)' },
+    { id: 5, name: 'EGFRmu(-)' },
+    { id: 6, name: 'その他' }
   ]
 
   include ActiveHash::Associations
