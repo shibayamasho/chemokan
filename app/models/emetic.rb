@@ -9,5 +9,5 @@ class Emetic < ActiveHash::Base
   ]
 
   include ActiveHash::Associations
-  has_many :regimens
+  has_many :plans
 end

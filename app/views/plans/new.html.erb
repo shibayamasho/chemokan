@@ -1,0 +1,55 @@
+<h1>レジメン新規登録</h1>
+<%= link_to "戻る", plans_path %>
+
+<%#= form_with url: '/plans', local: true do |f| %>
+<%= form_with model: @plan, local: true do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+  <div class="form-wrap">
+    <div class="plan-name">
+      <p>レジメン名（必須 重複不可）</p>
+      <%= f.text_field :name, id:"plan-name", placeholder:"レジメン名を入力" %>
+    </div>
+    <div class="plan-period">
+      <p>１コースの日数（必須 半角数字）</p>
+      <%= f.text_field :period, id:"plan-period", placeholder:"日数" %>
+    </div>
+    <div class="plan-medicine1">
+      <p>薬品名<%= f.text_field :medicine_name1, id:"plan-medicine-name1", placeholder:"抗がん剤の薬品名" %>　</p>
+      <p>略称<%= f.text_field :abbreviation1, id:"plan-abbreviation1", placeholder:"抗がん剤の略称" %>　</p>
+      <p>用量<%= f.text_field :dose1, id:"plan-dose1", placeholder:"用量" %>
+        <%= f.collection_select(:unit_id1, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit1"}) %>　</p>
+      <p>投与日<%= f.text_field :schedule1, id:"plan-schedule1", placeholder:"投与日" %></p>
+    </div>
+    <div class="plan-emetic">
+      <p>催吐性リスク（必須）</p>
+      <%= f.collection_select(:emetic_id, Emetic.all, :id, :name, {}, {class:"select-box", id:"plan-emetic"}) %>
+    </div>
+    <div class="plan-nk1">
+      <p>NK1拮抗薬</p>
+      <%= f.text_field :nk1, id:"plan-nk1", placeholder:"NK1拮抗薬の必要性を入力" %>
+    </div>
+    <div class="plan-dex">
+      <p>DEX</p>
+      <%= f.text_field :dex, id:"plan-dex", placeholder:"DEXの必要性・用量を入力" %>
+    </div>
+    <div class="plan-h1blocker">
+      <p>H1拮抗薬</p>
+      <%= f.text_field :h1blocker, id:"plan-h1blocker", placeholder:"H1拮抗薬の必要性を入力" %>
+    </div>
+    <div class="plan-h2blocker">
+      <p>H2拮抗薬</p>
+      <%= f.text_field :h2blocker, id:"plan-h2blocker", placeholder:"H2拮抗薬の必要性を入力" %>
+    </div>
+    <div class="plan-other-medicine">
+      <p>その他支持薬</p>
+      <%= f.text_area :other_medicine, id:"plan-other-medicine", placeholder:"その他支持薬が必要であれば入力" %>
+    </div>
+    <div>
+      <p>補足（任意）<p>
+      <%= f.text_area :text, id:"plan-text", placeholder:"補足" %>
+    </div>
+    <div>
+      <%= f.submit "登録", class:"submit-btn" %>
+    </div>
+  </div>
+<% end %>

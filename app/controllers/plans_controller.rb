@@ -1,22 +1,22 @@
-class RegimensController < ApplicationController
-  before_action :set_regimen, only: [:show, :edit, :update, :destroy]
+class PlansController < ApplicationController
+  before_action :set_plan, only: [:show, :edit, :update, :destroy]
 
   def index
-    @regimens = Regimen.all.order(:name)
+    @plans = Plan.all
   end
 
   def show
   end
 
   def new
-    @regimen = Regimen.new
+    @plan = Plan.new
   end
 
   def create
-    @regimen = Regimen.new(regimen_params)
-    if @regimen.save
-      regimen = Regimen.find_by(name: @regimen[:name])
-      redirect_to regimen_path(regimen.id)
+    @plan = Plan.new(plan_params)
+    if @plan.save
+      plan = plan.find_by(name: @plan[:name])
+      redirect_to plan_path(plan.id)
     else
       render :new
     end
@@ -26,26 +26,26 @@ class RegimensController < ApplicationController
   end
 
   def update
-    if @regimen.update(regimen_params)
-      redirect_to regimen_path(@regimen.id)
+    if @plan.update(plan_params)
+      redirect_to plan_path(@plan.id)
     else
       render :edit
     end
   end
 
   def destroy
-    @regimen.destroy
-    redirect_to regimens_path
+    @plan.destroy
+    redirect_to plans_path
   end
 
   private
 
-  def set_regimen
-    @regimen = Regimen.find(params[:id])
+  def set_plan
+    @plan = Plan.find(params[:id])
   end
 
-  def regimen_params
-    params.require(:regimen).permit(
+  def plan_params
+    params.require(:plan).permit(
       :name, :period, :emetic_id, :nk1, :dex, :h1blockler, :h2blockler,
       :other_medicine, :text,
       :medicine_name1, :medicine_name2, :medicine_name3, :medicine_name4, :medicine_name5, :medicine_name6, :medicine_name7, :medicine_name8,

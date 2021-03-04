@@ -1,4 +1,4 @@
-class Regimen < ApplicationRecord
+class Plan < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :emetic
   belongs_to :unit
@@ -26,6 +26,6 @@ class Regimen < ApplicationRecord
     validates :unit_id8
   end
 
-  # has_many :diseases, through: disease_regimens
+  # has_many :diseases, through: disease_plans
   # has_many :treatments
 end

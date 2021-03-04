@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_04_055011) do
+ActiveRecord::Schema.define(version: 2021_03_04_102520) do
 
   create_table "diseases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "cancer_id", null: false
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_03_04_055011) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "regimens", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "plans", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "period", null: false
     t.integer "emetic_id", null: false

@@ -1,6 +1,6 @@
-class CreateRegimen < ActiveRecord::Migration[6.0]
+class CreatePlans < ActiveRecord::Migration[6.0]
   def change
-    create_table :regimen do |t|
+    create_table :plans do |t|
       t.string  :name,           null: false
       t.integer :period,         null: false
       t.integer :emetic_id,      null: false
