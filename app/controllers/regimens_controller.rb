@@ -46,9 +46,9 @@ class RegimensController < ApplicationController
 
   def regimen_params
     params.require(:regimen).permit(
-      :name, :period, :emetic_id, :nk1, :dex, :h1blockler, :h2blockler
+      :name, :period, :emetic_id, :nk1, :dex, :h1blockler, :h2blockler,
       :other_medicine, :text,
-      :medicinen_name1, :medicinen_name2, :medicinen_name3, :medicinen_name4, :medicinen_name5, :medicinen_name6, :medicinen_name7, :medicinen_name8,
+      :medicine_name1, :medicine_name2, :medicine_name3, :medicine_name4, :medicine_name5, :medicine_name6, :medicine_name7, :medicine_name8,
       :abbreviation1, :abbreviation2, :abbreviation3, :abbreviation4, :abbreviation5, :abbreviation6, :abbreviation7, :abbreviation8,
       :dose1, :dose2, :dose3, :dose4, :dose5, :dose6, :dose7, :dose8,
       :unit_id1, :unit_id2, :unit_id3, :unit_id4, :unit_id5, :unit_id6, :unit_id7, :unit_id8,
