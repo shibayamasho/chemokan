@@ -16,7 +16,7 @@ class Plan < ApplicationRecord
     end
   end
 
-  with_options numericality: { other_than: 1 } do
+  with_options numericality: true do
     validates :unit_id2
     validates :unit_id3
     validates :unit_id4
