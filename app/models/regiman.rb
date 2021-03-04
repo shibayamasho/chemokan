@@ -4,7 +4,7 @@ class Regiman < ApplicationRecord
   belongs_to :unit
 
   with_options presence: true do
-    validates :name
+    validates :name, uniqueness: true
     validates :period
     validates :medicinen_name1
     validates :abbreviation1
