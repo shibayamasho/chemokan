@@ -1,0 +1,2 @@
+class Regiman < ApplicationRecord
+end
