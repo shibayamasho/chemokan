@@ -16,7 +16,7 @@ class RegimensController < ApplicationController
     @regimen = Regimen.new(regimen_params)
     if @regimen.save
       regimen = Regimen.find_by(name: @regimen[:name])
-      redirect_to patient_path(regimen.id)
+      redirect_to regimen_path(regimen.id)
     else
       render :new
     end
