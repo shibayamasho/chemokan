@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 2021_03_04_102520) do
     t.string "medicine_name5"
     t.string "medicine_name6"
     t.string "medicine_name7"
-    t.string "medicinen_name8"
+    t.string "medicine_name8"
     t.string "abbreviation1", null: false
     t.string "abbreviation2"
     t.string "abbreviation3"

@@ -17,7 +17,7 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.string  :medicine_name5
       t.string  :medicine_name6
       t.string  :medicine_name7
-      t.string  :medicinen_name8
+      t.string  :medicine_name8
       t.string  :abbreviation1,   null: false
       t.string  :abbreviation2
       t.string  :abbreviation3
