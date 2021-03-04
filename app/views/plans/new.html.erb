@@ -6,39 +6,88 @@
   <%= render 'shared/error_messages', model: f.object %>
   <div class="form-wrap">
     <div class="plan-name">
-      <p>レジメン名（必須 重複不可）</p>
-      <%= f.text_field :name, id:"plan-name", placeholder:"レジメン名を入力" %>
+      <p>レジメン名（必須 重複不可）
+      <%= f.text_field :name, id:"plan-name", placeholder:"レジメン名を入力" %></p>
     </div>
     <div class="plan-period">
-      <p>１コースの日数（必須 半角数字）</p>
-      <%= f.text_field :period, id:"plan-period", placeholder:"日数" %>
+      <p>１コースの日数（必須 半角数字）
+      <%= f.text_field :period, id:"plan-period", placeholder:"日数" %></p>
     </div>
     <div class="plan-medicine1">
-      <p>薬品名<%= f.text_field :medicine_name1, id:"plan-medicine-name1", placeholder:"抗がん剤の薬品名" %>　</p>
-      <p>略称<%= f.text_field :abbreviation1, id:"plan-abbreviation1", placeholder:"抗がん剤の略称" %>　</p>
-      <p>用量<%= f.text_field :dose1, id:"plan-dose1", placeholder:"用量" %>
-        <%= f.collection_select(:unit_id1, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit1"}) %>　</p>
-      <p>投与日<%= f.text_field :schedule1, id:"plan-schedule1", placeholder:"投与日" %></p>
+      <a>薬品１<%= f.text_field :medicine_name1, id:"plan-medicine-name1", placeholder:"抗がん剤の薬品名" %>　</a>
+      <a>略称<%= f.text_field :abbreviation1, id:"plan-abbreviation1", placeholder:"抗がん剤の略称" %>　</a>
+      <a>用量<%= f.text_field :dose1, id:"plan-dose1", placeholder:"用量" %>
+        <%= f.collection_select(:unit_id1, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit1"}) %>　</a>
+      <a>投与日<%= f.text_field :schedule1, id:"plan-schedule1", placeholder:"投与日" %></a>
+    </div>
+    <div class="plan-medicine2">
+      <a>薬品２<%= f.text_field :medicine_name2, id:"plan-medicine-name2", placeholder:"抗がん剤の薬品名" %>　</a>
+      <a>略称<%= f.text_field :abbreviation2, id:"plan-abbreviation2", placeholder:"抗がん剤の略称" %>　</a>
+      <a>用量<%= f.text_field :dose2, id:"plan-dose2", placeholder:"用量" %>
+        <%= f.collection_select(:unit_id2, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit2"}) %>　</a>
+      <a>投与日<%= f.text_field :schedule2, id:"plan-schedule2", placeholder:"投与日" %></a>
+    </div>
+    <div class="plan-medicine3">
+      <a>薬品３<%= f.text_field :medicine_name3, id:"plan-medicine-name3", placeholder:"抗がん剤の薬品名" %>　</a>
+      <a>略称<%= f.text_field :abbreviation3, id:"plan-abbreviation3", placeholder:"抗がん剤の略称" %>　</a>
+      <a>用量<%= f.text_field :dose3, id:"plan-dose3", placeholder:"用量" %>
+        <%= f.collection_select(:unit_id3, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit3"}) %>　</a>
+      <a>投与日<%= f.text_field :schedule3, id:"plan-schedule3", placeholder:"投与日" %></a>
+    </div>
+    <div class="plan-medicine4">
+      <a>薬品４<%= f.text_field :medicine_name4, id:"plan-medicine-name4", placeholder:"抗がん剤の薬品名" %>　</a>
+      <a>略称<%= f.text_field :abbreviation4, id:"plan-abbreviation4", placeholder:"抗がん剤の略称" %>　</a>
+      <a>用量<%= f.text_field :dose4, id:"plan-dose4", placeholder:"用量" %>
+        <%= f.collection_select(:unit_id4, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit4"}) %>　</a>
+      <a>投与日<%= f.text_field :schedule4, id:"plan-schedule4", placeholder:"投与日" %></a>
+    </div>
+    <div class="plan-medicine5">
+      <a>薬品５<%= f.text_field :medicine_name5, id:"plan-medicine-name5", placeholder:"抗がん剤の薬品名" %>　</a>
+      <a>略称<%= f.text_field :abbreviation5, id:"plan-abbreviation5", placeholder:"抗がん剤の略称" %>　</a>
+      <a>用量<%= f.text_field :dose5, id:"plan-dose5", placeholder:"用量" %>
+        <%= f.collection_select(:unit_id5, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit5"}) %>　</a>
+      <a>投与日<%= f.text_field :schedule5, id:"plan-schedule5", placeholder:"投与日" %></a>
+    </div>
+    <div class="plan-medicine6">
+      <a>薬品６<%= f.text_field :medicine_name6, id:"plan-medicine-name6", placeholder:"抗がん剤の薬品名" %>　</a>
+      <a>略称<%= f.text_field :abbreviation6, id:"plan-abbreviation6", placeholder:"抗がん剤の略称" %>　</a>
+      <a>用量<%= f.text_field :dose6, id:"plan-dose6", placeholder:"用量" %>
+        <%= f.collection_select(:unit_id6, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit6"}) %>　</a>
+      <a>投与日<%= f.text_field :schedule6, id:"plan-schedule6", placeholder:"投与日" %></a>
+    </div>
+    <div class="plan-medicine7">
+      <a>薬品７<%= f.text_field :medicine_name7, id:"plan-medicine-name7", placeholder:"抗がん剤の薬品名" %>　</a>
+      <a>略称<%= f.text_field :abbreviation7, id:"plan-abbreviation7", placeholder:"抗がん剤の略称" %>　</a>
+      <a>用量<%= f.text_field :dose7, id:"plan-dose7", placeholder:"用量" %>
+        <%= f.collection_select(:unit_id7, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit7"}) %>　</a>
+      <a>投与日<%= f.text_field :schedule7, id:"plan-schedule7", placeholder:"投与日" %></a>
+    </div>
+    <div class="plan-medicine8">
+      <a>薬品８<%= f.text_field :medicine_name8, id:"plan-medicine-name8", placeholder:"抗がん剤の薬品名" %>　</a>
+      <a>略称<%= f.text_field :abbreviation8, id:"plan-abbreviation8", placeholder:"抗がん剤の略称" %>　</a>
+      <a>用量<%= f.text_field :dose8, id:"plan-dose8", placeholder:"用量" %>
+        <%= f.collection_select(:unit_id8, Unit.all, :id, :name, {}, {class:"select-box", id:"plan-unit8"}) %>　</a>
+      <a>投与日<%= f.text_field :schedule8, id:"plan-schedule8", placeholder:"投与日" %></a>
     </div>
     <div class="plan-emetic">
-      <p>催吐性リスク（必須）</p>
-      <%= f.collection_select(:emetic_id, Emetic.all, :id, :name, {}, {class:"select-box", id:"plan-emetic"}) %>
+      <p>催吐性リスク（必須）
+      <%= f.collection_select(:emetic_id, Emetic.all, :id, :name, {}, {class:"select-box", id:"plan-emetic"}) %></p>
     </div>
     <div class="plan-nk1">
-      <p>NK1拮抗薬</p>
-      <%= f.text_field :nk1, id:"plan-nk1", placeholder:"NK1拮抗薬の必要性を入力" %>
+      <p>NK1拮抗薬
+      <%= f.text_field :nk1, id:"plan-nk1", placeholder:"NK1拮抗薬の必要性を入力" %></p>
     </div>
     <div class="plan-dex">
-      <p>DEX</p>
-      <%= f.text_field :dex, id:"plan-dex", placeholder:"DEXの必要性・用量を入力" %>
+      <p>DEX
+      <%= f.text_field :dex, id:"plan-dex", placeholder:"DEXの必要性・用量を入力" %></p>
     </div>
     <div class="plan-h1blocker">
-      <p>H1拮抗薬</p>
-      <%= f.text_field :h1blocker, id:"plan-h1blocker", placeholder:"H1拮抗薬の必要性を入力" %>
+      <p>H1拮抗薬
+      <%= f.text_field :h1blocker, id:"plan-h1blocker", placeholder:"H1拮抗薬の必要性を入力" %></p>
     </div>
     <div class="plan-h2blocker">
-      <p>H2拮抗薬</p>
-      <%= f.text_field :h2blocker, id:"plan-h2blocker", placeholder:"H2拮抗薬の必要性を入力" %>
+      <p>H2拮抗薬
+      <%= f.text_field :h2blocker, id:"plan-h2blocker", placeholder:"H2拮抗薬の必要性を入力" %></p>
     </div>
     <div class="plan-other-medicine">
       <p>その他支持薬</p>
