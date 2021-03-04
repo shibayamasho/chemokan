@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2021_03_04_055011) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "regimen", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "regimens", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.integer "period", null: false
     t.integer "emetic_id", null: false
