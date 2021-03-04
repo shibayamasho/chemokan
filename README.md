@@ -62,7 +62,7 @@
 | dex デキサメタゾン          | string       |                |
 | h1blocker H1拮抗薬         | string       |                |
 | h2blocker H2拮抗薬         | string       |                |
-| other_medicine その他支持薬 | integer      |                |
+| other_medicine その他支持薬 | string       |                |
 | text その他の情報           | text         |                |
 | medicine_name1~8 薬品名    | string       | 1: null: false |
 | abbreviation1~8 略語       | string       | 1: null: false |
