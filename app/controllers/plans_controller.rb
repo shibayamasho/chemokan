@@ -15,7 +15,7 @@ class PlansController < ApplicationController
   def create
     @plan = Plan.new(plan_params)
     if @plan.save
-      plan = plan.find_by(name: @plan[:name])
+      plan = Plan.find_by(name: @plan[:name])
       redirect_to plan_path(plan.id)
     else
       render :new
