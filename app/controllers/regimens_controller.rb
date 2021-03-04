@@ -1,0 +1,2 @@
+class RegimensController < ApplicationController
+end
