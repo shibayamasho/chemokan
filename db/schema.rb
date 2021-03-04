@@ -39,13 +39,13 @@ ActiveRecord::Schema.define(version: 2021_03_04_055011) do
     t.string "h2blockler"
     t.string "other_medicine"
     t.text "text"
-    t.string "medicinen_name1", null: false
-    t.string "medicinen_name2"
-    t.string "medicinen_name3"
-    t.string "medicinen_name4"
-    t.string "medicinen_name5"
-    t.string "medicinen_name6"
-    t.string "medicinen_name7"
+    t.string "medicine_name1", null: false
+    t.string "medicine_name2"
+    t.string "medicine_name3"
+    t.string "medicine_name4"
+    t.string "medicine_name5"
+    t.string "medicine_name6"
+    t.string "medicine_name7"
     t.string "medicinen_name8"
     t.string "abbreviation1", null: false
     t.string "abbreviation2"
