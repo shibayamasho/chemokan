@@ -31,6 +31,24 @@ RSpec.describe Patient, type: :model do
         expect(another_patient.errors.full_messages).to include "Name has already been taken"
       end
 
+      it 'nameが3文字以上では登録できない' do
+        @patient.name = "AAA"
+        @patient.valid?
+        expect(@patient.errors.full_messages).to include "Name is the wrong length (should be 2 characters)"
+      end
+
+      it 'nameが1文字では登録できない' do
+        @patient.name = "Z"
+        @patient.valid?
+        expect(@patient.errors.full_messages).to include "Name is the wrong length (should be 2 characters)"
+      end
+
+      it 'nameが小文字では登録できない' do
+        @patient.name = "zz"
+        @patient.valid?
+        expect(@patient.errors.full_messages).to include "Name is invalid"
+      end
+
       it 'gender_idが空では登録できない' do
         @patient.gender_id = nil
         @patient.valid?

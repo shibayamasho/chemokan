@@ -12,17 +12,12 @@
   <body>
     <header>
       <% if user_signed_in? %>
-        <%= link_to "TOP", root_path %>
-        <a>　　</a>
-        <%= link_to "患者一覧", patients_path %>
-        <%# <a>　　</a>
-        <%#= link_to "疾患一覧", ここにパスを入力 %>
-        <%# <a>　　</a>
-        <%#= link_to "レジメン一覧", ここにパスを入力 %>
-        <a>　　</a>
-        <a class="user-name"><%= current_user.name %>さんがログイン中</a>
-        <a>　　</a>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <a><%= link_to "TOP", root_path %>　　</a>
+        <a><%= link_to "患者一覧", patients_path %>　　</a>
+        <a><%= link_to "疾患一覧", diseases_path %>　　</a>
+        <a><%#= link_to "レジメン一覧", ここにパスを入力 %>　　</a>
+        <a class="user-name"><%= current_user.name %>さんがログイン中　　</a>
+        <a><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></a>
       <% end %>
     </header>
 
