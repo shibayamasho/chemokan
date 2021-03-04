@@ -1,4 +1,4 @@
-class Regiman < ApplicationRecord
+class Regimen < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :emetic
   belongs_to :unit
@@ -6,7 +6,7 @@ class Regiman < ApplicationRecord
   with_options presence: true do
     validates :name, uniqueness: true
     validates :period
-    validates :medicinen_name1
+    validates :medicine_name1
     validates :abbreviation1
     validates :dose1
     validates :schedule1

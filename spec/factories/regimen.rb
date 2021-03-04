@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :regiman do
+  factory :regimen do
     
   end
 end
