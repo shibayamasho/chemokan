@@ -7,9 +7,9 @@ class Unit < ActiveHash::Base
     { id: 5, name: 'μg/body' },
     { id: 6, name: 'AUC' },
     { id: 7, name: 'UI/㎡' },
-    { id: 8, name: 'KE/body' },
+    { id: 8, name: 'KE/body' }
   ]
 
   include ActiveHash::Associations
-  has_many :regimen
+  has_many :regimens
 end
