@@ -46,7 +46,7 @@ class PlansController < ApplicationController
 
   def plan_params
     params.require(:plan).permit(
-      :name, :period, :emetic_id, :nk1, :dex, :h1blockler, :h2blockler,
+      :name, :period, :emetic_id, :nk1, :dex, :h1blocker, :h2blocker,
       :other_medicine, :text,
       :medicine_name1, :medicine_name2, :medicine_name3, :medicine_name4, :medicine_name5, :medicine_name6, :medicine_name7, :medicine_name8,
       :abbreviation1, :abbreviation2, :abbreviation3, :abbreviation4, :abbreviation5, :abbreviation6, :abbreviation7, :abbreviation8,
