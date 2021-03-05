@@ -51,7 +51,7 @@ class PlansController < ApplicationController
       :medicine_name1, :medicine_name2, :medicine_name3, :medicine_name4, :medicine_name5, :medicine_name6, :medicine_name7, :medicine_name8,
       :abbreviation1, :abbreviation2, :abbreviation3, :abbreviation4, :abbreviation5, :abbreviation6, :abbreviation7, :abbreviation8,
       :dose1, :dose2, :dose3, :dose4, :dose5, :dose6, :dose7, :dose8,
-      :unit_id1, :unit_id2, :unit_id3, :unit_id4, :unit_id5, :unit_id6, :unit_id7, :unit_id8,
+      :unit1_id, :unit2_id, :unit3_id, :unit4_id, :unit5_id, :unit6_id, :unit7_id, :unit8_id,
       :schedule1, :schedule2, :schedule3, :schedule4, :schedule5, :schedule6, :schedule7, :schedule8
     )
   end
