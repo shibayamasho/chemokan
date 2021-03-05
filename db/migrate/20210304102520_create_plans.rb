@@ -6,8 +6,8 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.integer :emetic_id,      null: false
       t.string  :nk1
       t.string  :dex
-      t.string  :h1blockler
-      t.string  :h2blockler
+      t.string  :h1blocker
+      t.string  :h2blocker
       t.string  :other_medicine
       t.text    :text
       t.string  :medicine_name1, null: false
@@ -34,14 +34,14 @@ class CreatePlans < ActiveRecord::Migration[6.0]
       t.float   :dose6
       t.float   :dose7
       t.float   :dose8
-      t.integer :unit_id1,        null: false
-      t.integer :unit_id2
-      t.integer :unit_id3
-      t.integer :unit_id4
-      t.integer :unit_id5
-      t.integer :unit_id6
-      t.integer :unit_id7
-      t.integer :unit_id8
+      t.integer :unit1_id,        null: false
+      t.integer :unit2_id
+      t.integer :unit3_id
+      t.integer :unit4_id
+      t.integer :unit5_id
+      t.integer :unit6_id
+      t.integer :unit7_id
+      t.integer :unit8_id
       t.string  :schedule1,       null: false
       t.string  :schedule2
       t.string  :schedule3
