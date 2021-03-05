@@ -1,4 +1,4 @@
-class Unit < ActiveHash::Base
+class Unit5 < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
     { id: 2, name: 'mg/㎡' },
