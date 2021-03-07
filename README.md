@@ -51,7 +51,7 @@
 
 
 
-## regimens テーブル
+## plans(regimens) テーブル
 
 | Column                    | Type         | Options        |
 | ------------------------- | ------------ | -------------- |
@@ -62,12 +62,12 @@
 | dex デキサメタゾン          | string       |                |
 | h1blocker H1拮抗薬         | string       |                |
 | h2blocker H2拮抗薬         | string       |                |
-| other_medicine その他支持薬 | integer      |                |
+| other_medicine その他支持薬 | string       |                |
 | text その他の情報           | text         |                |
 | medicine_name1~8 薬品名    | string       | 1: null: false |
 | abbreviation1~8 略語       | string       | 1: null: false |
 | dose1~8 用量               | float        | 1: null: false |
-| unit_id1~8 単位            | integer      | 1: null: false |
+| unit1~8_id 単位            | integer      | 1: null: false |
 | schedule1~8 日程           | string       | 1: null: false |
 
 ### Association

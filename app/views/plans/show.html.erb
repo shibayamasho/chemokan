@@ -1,0 +1,115 @@
+<h1>レジメン詳細</h1>
+<%= link_to "戻る", plans_path %>
+<div class="plan-info">
+  <div >
+    <a class="plan-name">
+      レジメン名：<%= @plan.name %> １コース<%= @plan.period %>日間
+    </a>
+  </div>
+</div>
+
+<div class="plan-medicine1">
+  <a>薬品１：<%= @plan.medicine_name1 %>　</a>
+  <a>(<%= @plan.abbreviation1 %>)　</a>
+  <a>用量：<%= @plan.dose1 %>
+    <%= @plan.unit1.name %>　</a>
+  <a>投与日：<%= @plan.schedule1 %></a>
+</div>
+<% if @plan.medicine_name2 != "" %>
+<div class="plan-medicine2">
+  <a>薬品２：<%= @plan.medicine_name2 %>　</a>
+  <a>(<%= @plan.abbreviation2 %>)　</a>
+  <a>用量：<%= @plan.dose2 %>
+    <%= @plan.unit2.name %>　</a>
+  <a>投与日：<%= @plan.schedule2 %></a>
+</div>
+<% end %>
+<% if @plan.medicine_name3 != "" %>
+<div class="plan-medicine3">
+  <a>薬品３：<%= @plan.medicine_name3 %>　</a>
+  <a>(<%= @plan.abbreviation3 %>)　</a>
+  <a>用量：<%= @plan.dose3 %>
+    <%= @plan.unit3.name %>　</a>
+  <a>投与日：<%= @plan.schedule3 %></a>
+</div>
+<% end %>
+<% if @plan.medicine_name4 != "" %>
+<div class="plan-medicine4">
+  <a>薬品４：<%= @plan.medicine_name4 %>　</a>
+  <a>(<%= @plan.abbreviation4 %>)　</a>
+  <a>用量：<%= @plan.dose4 %>
+    <%= @plan.unit4.name %>　</a>
+  <a>投与日：<%= @plan.schedule4 %></a>
+</div>
+<% end %>
+<% if @plan.medicine_name5 != "" %>
+<div class="plan-medicine5">
+  <a>薬品５：<%= @plan.medicine_name5 %>　</a>
+  <a>(<%= @plan.abbreviation5 %>)　</a>
+  <a>用量：<%= @plan.dose5 %>
+    <%= @plan.unit5.name %>　</a>
+  <a>投与日：<%= @plan.schedule5 %></a>
+</div>
+<% end %>
+<% if @plan.medicine_name6 != "" %>
+<div class="plan-medicine6">
+  <a>薬品６：<%= @plan.medicine_name6 %>　</a>
+  <a>(<%= @plan.abbreviation6 %>)　</a>
+  <a>用量：<%= @plan.dose6 %>
+    <%= @plan.unit6.name %>　</a>
+  <a>投与日：<%= @plan.schedule6 %></a>
+</div>
+<% end %>
+<% if @plan.medicine_name7 != "" %>
+<div class="plan-medicine7">
+  <a>薬品７：<%= @plan.medicine_name7 %>　</a>
+  <a>(<%= @plan.abbreviation7 %>)　</a>
+  <a>用量：<%= @plan.dose7 %>
+    <%= @plan.unit7.name %>　</a>
+  <a>投与日：<%= @plan.schedule7 %></a>
+</div>
+<% end %>
+<% if @plan.medicine_name8 != "" %>
+<div class="plan-medicine8">
+  <a>薬品８：<%= @plan.medicine_name8 %>　</a>
+  <a>(<%= @plan.abbreviation8 %>)　</a>
+  <a>用量：<%= @plan.dose8 %>
+    <%= @plan.unit8.name %>　</a>
+  <a>投与日：<%= @plan.schedule8 %></a>
+</div>
+<% end %>
+<div class="plan-emetic">
+  <p>催吐性リスク
+  <%= @plan.emetic.name %></p>
+</div>
+<div class="plan-nk1">
+  <p>NK1拮抗薬
+  <%= @plan.nk1 %></p>
+</div>
+<div class="plan-dex">
+  <p>DEX
+  <%= @plan.dex %></p>
+</div>
+<div class="plan-h1blocker">
+  <p>H1拮抗薬
+  <%= @plan.h1blocker %></p>
+</div>
+<div class="plan-h2blocker">
+  <p>H2拮抗薬
+  <%= @plan.h2blocker %></p>
+</div>
+<div class="plan-other-medicine">
+  <p>その他支持薬</p>
+  <%= @plan.other_medicine %>
+</div>
+<div>
+  <p>補足<p>
+  <%= @plan.text %>
+</div>
+
+<div class="plan-edit">
+  <%= link_to "編集", edit_plan_path(@plan.id) %>
+</div>
+<div class="plan-destroy">
+  <%= link_to "削除", plan_path(@plan.id), method: :delete %>
+</div>
