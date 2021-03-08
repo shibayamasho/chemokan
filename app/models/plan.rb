@@ -33,6 +33,6 @@ class Plan < ApplicationRecord
     validates :unit8_id
   end
 
-  # has_many :diseases, through: disease_plans
+  has_many :diseases
   # has_many :treatments
 end
