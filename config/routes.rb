@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   resources :treatments, only: [:index]
   resources :patients
   resources :plans do
-    resources :diseases, only: [:index, :create, :edit, :update, :destroy]
+    resources :diseases, only: [:create, :destroy]
   end
 end
