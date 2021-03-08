@@ -115,6 +115,10 @@
 </div>
 
 <h3>レジメンの適応疾患一覧</h3>
+<% if Disease.count == 0 %>
+  <div>まだ登録されていません。</div>
+<% end %>
+
 <div class="diseases">
   <% @diseases.each do |disease| %>
     <div class="disease">
