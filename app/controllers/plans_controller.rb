@@ -6,6 +6,8 @@ class PlansController < ApplicationController
   end
 
   def show
+    @diseases = @plan.diseases
+    @disease = Disease.new
   end
 
   def new
