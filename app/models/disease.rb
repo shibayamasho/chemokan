@@ -12,6 +12,6 @@ class Disease < ApplicationRecord
     validates :other_id, numericality: true
   end
 
-  # has_many :plans, through: disease_plans
+  belongs_to :plan
   # has_many :treatments
 end
