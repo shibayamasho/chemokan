@@ -1,7 +1,7 @@
-Patient.create(name: "AB", gender_id: 2, birthday: 2000-01-01, text: "テスト患者01")
-Patient.create(name: "CD", gender_id: 3, birthday: 1990-01-01, text: "テスト患者02")
-Patient.create(name: "EF", gender_id: 2, birthday: 1980-01-01, text: "テスト患者03")
-Patient.create(name: "GH", gender_id: 2, birthday: 1970-01-01, text: "テスト患者04")
+Patient.create(name: "AB", gender_id: 2, birthday: "2000-01-01", text: "テスト患者01")
+Patient.create(name: "CD", gender_id: 3, birthday: "1990-01-01", text: "テスト患者02")
+Patient.create(name: "EF", gender_id: 2, birthday: "1980-01-01", text: "テスト患者03")
+Patient.create(name: "GH", gender_id: 2, birthday: "1970-01-01", text: "テスト患者04")
 
 Plan.create(
   name: "PTX80＋Bev10 q4w",
