@@ -34,5 +34,5 @@ class Plan < ApplicationRecord
   end
 
   has_many :diseases
-  # has_many :treatments
+  has_many :treatments
 end
