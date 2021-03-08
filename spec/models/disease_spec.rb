@@ -2,12 +2,14 @@ require 'rails_helper'
 
 RSpec.describe Disease, type: :model do
   before do
-    @disease = FactoryBot.build(:disease)
+    @plan = FactoryBot.create(:plan)
+    @disease = FactoryBot.build(:disease, plan_id: @plan.id)
+    sleep(1)
   end
 
   describe '疾患新規登録' do
       context '新規登録できるとき' do
-        it 'cancer_id, other_id, purpose_idがあれば登録できる' do
+        it 'cancer_id, other_id, purpose_id, plan_idがあれば登録できる' do
           expect(@disease).to be_valid
         end
 
@@ -46,6 +48,12 @@ RSpec.describe Disease, type: :model do
           @disease.purpose_id = 1
           @disease.valid?
           expect(@disease.errors.full_messages).to include "Purpose must be other than 1"
+        end
+
+        it 'plan_idが空では登録できない' do
+          @disease.plan_id = nil
+          @disease.valid?
+          expect(@disease.errors.full_messages).to include "Plan must exist"
         end
       end
   end
