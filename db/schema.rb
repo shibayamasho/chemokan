@@ -85,32 +85,6 @@ ActiveRecord::Schema.define(version: 2021_03_08_093955) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "treatments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.date "date", null: false
-    t.integer "in_out_id", null: false
-    t.integer "course", null: false
-    t.integer "day", null: false
-    t.date "mesuring_date", null: false
-    t.float "height", null: false
-    t.float "weight", null: false
-    t.float "dose1"
-    t.float "dose2"
-    t.float "dose3"
-    t.float "dose4"
-    t.float "dose5"
-    t.float "dose6"
-    t.float "dose7"
-    t.float "dose8"
-    t.string "nk1"
-    t.string "dex"
-    t.string "h1blocker"
-    t.string "h2blocker"
-    t.string "other_medicine"
-    t.text "text"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
