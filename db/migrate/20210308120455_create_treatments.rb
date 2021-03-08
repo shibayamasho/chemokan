@@ -3,9 +3,9 @@ class CreateTreatments < ActiveRecord::Migration[6.0]
     create_table :treatments do |t|
       t.date       :date,          null: false
       t.integer    :in_out_id,     null: false
-      t.references :patient_id,    null: false, foreign_key: true
-      t.references :disease_id,    null: false, foreign_key: true
-      t.references :plan_id,       null: false, foreign_key: true
+      t.references :patient,       null: false, foreign_key: true
+      t.references :disease,       null: false, foreign_key: true
+      t.references :plan,          null: false, foreign_key: true
       t.integer    :course,        null: false
       t.integer    :day,           null: false
       t.date       :mesuring_date, null: false
