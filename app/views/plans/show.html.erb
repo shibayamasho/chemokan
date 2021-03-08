@@ -113,3 +113,18 @@
 <div class="plan-destroy">
   <%= link_to "削除", plan_path(@plan.id), method: :delete %>
 </div>
+
+<h3>レジメンの適応疾患一覧</h3>
+<div class="diseases">
+  <% @diseases.each do |disease| %>
+    <div class="disease">
+      <%= link_to '削除', plan_disease_path(@plan.id, disease.id), method: :delete %>
+      <a class="cancer-name">がん種：<%= disease.cancer.name %>　　</a>
+      <a class="disease-other">サブタイプ等：<%= disease.other.name %>　　</a>
+      <a class="disease-purpose">治療目的：<%= disease.purpose.name %>　　</a>
+    </div>
+  <% end %>
+</div>
+
+<h4>適応疾患を追加する</h4>
+<%= render 'diseases/new_edit' %>
