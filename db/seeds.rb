@@ -1,7 +1,51 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+Plan.create(
+  name: "PTX80＋Bev10 q4w",
+  period: 28,
+  emetic_id: 4,
+  nk1: "不要",
+  dex: "必要",
+  h1blocker: "必要",
+  h2blocker: "必要",
+  other_medicine: "なし",
+  text: "アルコール耐性を確認",
+  medicine_name1: "パクリタキセル",
+  medicine_name2: "ベバシズマブ",
+  medicine_name3: "",
+  medicine_name4: "",
+  medicine_name5: "",
+  medicine_name6: "",
+  medicine_name7: "",
+  medicine_name8: "",
+  abbreviation1: "PTX",
+  abbreviation2: "Bev",
+  abbreviation3: "",
+  abbreviation4: "",
+  abbreviation5: "",
+  abbreviation6: "",
+  abbreviation7: "",
+  abbreviation8: "",
+  dose1: 80,
+  dose2: 10,
+  dose3: "",
+  dose4: "",
+  dose5: "",
+  dose6: "",
+  dose7: "",
+  dose8: "",
+  unit1_id: 2,
+  unit2_id: 3,
+  unit3_id: 1,
+  unit4_id: 1,
+  unit5_id: 1,
+  unit6_id: 1,
+  unit7_id: 1,
+  unit8_id: 1,
+  schedule1: "day1,8,15",
+  schedule2: "day1,15",
+  schedule3: "",
+  schedule4: "",
+  schedule5: "",
+  schedule6: "",
+  schedule7: "",
+  schedule8: ""
+)
