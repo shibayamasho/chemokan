@@ -6,7 +6,7 @@ class PatientsController < ApplicationController
   end
 
   def show
-    @treatments = @patient.treatments.includes(:plan)
+    @treatments = @patient.treatments.includes(:plan).order(:date)
   end
 
   def new
