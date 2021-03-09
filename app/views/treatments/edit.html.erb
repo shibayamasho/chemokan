@@ -1,0 +1,108 @@
+<h1>治療歴 編集</h1>
+<%= link_to '患者詳細へ戻る', patient_path(@patient.id) %>
+<%= link_to '治療歴詳細へ戻る', patient_treatment_path(params[:id]) %>
+<p>患者名：<%= @patient.name %></p>
+<p>疾患：<%= @disease.cancer.name %>　<%= @disease.other.name %>　<%= @disease.purpose.name %></p>
+<div>
+  <a>【<%= @treatment.in_out.name %>】</a>
+  <a><%= @treatment.date %></a>
+</div>
+<div class="regimen">
+  <a><%= @plan.name %></a>
+  <a><%= @treatment.course %>コース目 day<%= @treatment.day %></a>
+</div>
+<div class="mesuring">
+  <a>測定日：<%= @treatment.mesuring_date %></a>
+  <a>身長：<%= @treatment.height %>cm</a>
+  <a>体重<%= @treatment.weight %>kg</a>
+  <a>体表面積：<%= @bsa %>㎡（Du Bois法）</a>
+</div>
+
+<%= form_with(model: [@patient, @treatment], local: true) do |f| %>
+  <%= render 'shared/error_messages', model: f.object %>
+  <div class="form-wrap">
+    <div class="medicine1">
+      <a>薬品名：<%= @plan.medicine_name1 %>(<%= @plan.abbreviation1 %>)　用量：<%= @plan.dose1.to_s + @plan.unit1.name %></a>
+      <a>理論値：<%= @theoretical_value1 %>mg</a>
+      <a>投与量：<%= f.text_field :dose1, placeholder: "投与量" %>mg</a>
+      <a>理論値％：<%# ここで理論値を自動計算させる %></a>
+      <a><%= @plan.schedule1 %></a>
+    </div>
+    <% if @plan.medicine_name2 != "" %>
+      <div class="medicine2">
+        <a>薬品名：<%= @plan.medicine_name2 %>(<%= @plan.abbreviation2 %>)　用量：<%= @plan.dose2.to_s + @plan.unit2.name %></a>
+        <a>理論値：<%= @theoretical_value2 %>mg</a>
+        <a>投与量：<%= f.text_field :dose2, placeholder: "投与量" %>mg</a>
+        <a>理論値％：<%# ここで理論値を自動計算させる %></a>
+        <a><%= @plan.schedule2 %></a>
+      </div>
+    <% end %>
+    <% if @plan.medicine_name3 != "" %>
+      <div class="medicine3">
+        <a>薬品名：<%= @plan.medicine_name3 %>(<%= @plan.abbreviation3 %>)　用量：<%= @plan.dose3.to_s + @plan.unit3.name %></a>
+        <a>理論値：<%= @theoretical_value3 %>mg</a>
+        <a>投与量：<%= f.text_field :dose3, placeholder: "投与量" %>mg</a>
+        <a>理論値％：<%# ここで理論値を自動計算させる %></a>
+        <a><%= @plan.schedule3 %></a>
+      </div>
+    <% end %>
+    <% if @plan.medicine_name4 != "" %>
+      <div class="medicine4">
+        <a>薬品名：<%= @plan.medicine_name4 %>(<%= @plan.abbreviation4 %>)　用量：<%= @plan.dose4.to_s + @plan.unit4.name %></a>
+        <a>理論値：<%= @theoretical_value4 %>mg</a>
+        <a>投与量：<%= f.text_field :dose4, placeholder: "投与量" %>mg</a>
+        <a>理論値％：<%# ここで理論値を自動計算させる %></a>
+        <a><%= @plan.schedule4 %></a>
+      </div>
+    <% end %>
+    <% if @plan.medicine_name5 != "" %>
+      <div class="medicine5">
+        <a>薬品名：<%= @plan.medicine_name5 %>(<%= @plan.abbreviation5 %>)　用量：<%= @plan.dose5.to_s + @plan.unit5.name %></a>
+        <a>理論値：<%= @theoretical_value5 %>mg</a>
+        <a>投与量：<%= f.text_field :dose5, placeholder: "投与量" %>mg</a>
+        <a>理論値％：<%# ここで理論値を自動計算させる %></a>
+        <a><%= @plan.schedule5 %></a>
+      </div>
+    <% end %>
+    <% if @plan.medicine_name6 != "" %>
+      <div class="medicine6">
+        <a>薬品名：<%= @plan.medicine_name6 %>(<%= @plan.abbreviation6 %>)　用量：<%= @plan.dose6.to_s + @plan.unit6.name %></a>
+        <a>理論値：<%= @theoretical_value6 %>mg</a>
+        <a>投与量：<%= f.text_field :dose6, placeholder: "投与量" %>mg</a>
+        <a>理論値％：<%# ここで理論値を自動計算させる %></a>
+        <a><%= @plan.schedule6 %></a>
+      </div>
+    <% end %>
+    <% if @plan.medicine_name7 != "" %>
+      <div class="medicine7">
+        <a>薬品名：<%= @plan.medicine_name7 %>(<%= @plan.abbreviation7 %>)　用量：<%= @plan.dose7.to_s + @plan.unit7.name %></a>
+        <a>理論値：<%= @theoretical_value7 %>mg</a>
+        <a>投与量：<%= f.text_field :dose7, placeholder: "投与量" %>mg</a>
+        <a>理論値％：<%# ここで理論値を自動計算させる %></a>
+        <a><%= @plan.schedule7 %></a>
+      </div>
+    <% end %>
+    <% if @plan.medicine_name8 != "" %>
+      <div class="medicine8">
+        <a>薬品名：<%= @plan.medicine_name8 %>(<%= @plan.abbreviation8 %>)　用量：<%= @plan.dose8.to_s + @plan.unit8.name %></a>
+        <a>理論値：<%= @theoretical_value8 %>mg</a>
+        <a>投与量：<%= f.text_field :dose8, placeholder: "投与量" %>mg</a>
+        <a>理論値％：<%# ここで理論値を自動計算させる %></a>
+        <a><%= @plan.schedule8 %></a>
+      </div>
+    <% end %>
+
+    <div class="support">
+      <p>催吐性リスク：<%= @plan.emetic.name %>　</p>
+      <p>NK1：<%= f.text_field :nk1 %>　</p>
+      <p>DEX：<%= f.text_field :dex %>　</p>
+      <p>H1blocker：<%= f.text_field :h1blocker %>　</p>
+      <p>H2Blocker：<%= f.text_field :h2blocker %>　</p>
+      <p>その他支持薬：<%= f.text_field :other_medicine %></p>
+    </div>
+
+    <p>補足：<%= f.text_area :text %></p>
+
+    <%= f.submit "更新" %>
+  </div>
+<% end %>
