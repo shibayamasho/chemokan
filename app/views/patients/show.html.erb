@@ -21,3 +21,17 @@
 <div class="patient-destroy">
   <%= link_to "削除", patient_path(@patient.id), method: :delete %>
 </div>
+<br>
+<%= link_to "治療歴を新規作成", new_patient_treatment_path(@patient.id) %>
+<br>
+<h3>治療歴一覧</h3>
+<% @treatments.each do |treatment| %>
+  <div class="treatment">
+    <%= link_to '詳細', patient_treatment_path(@patient.id, treatment.id) %>
+    <a><%= treatment.date %>　</a>
+    <a><%= treatment.in_out.name %>　</a>
+    <a><%= treatment.plan.name %>　</a>
+    <a><%= treatment.course %>コース目</a>
+    <a>day<%= treatment.day %></a>
+  </div>
+<% end %>
