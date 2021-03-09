@@ -1,0 +1,96 @@
+<h1>治療歴詳細</h1>
+<p>患者名：<%= @patient.name %></p>
+<p>疾患：<%= @disease.cancer.name %>　<%= @disease.other.name %>　<%= @disease.purpose.name %></p>
+<div>
+  <a>【<%= @treatment.in_out.name %>】</a> <%# 入院・外来を表示 %>
+  <a><%= @treatment.date %></a>
+</div>
+<div class="regimen">
+  <a><%= @plan.name %></a>
+  <a><%= @treatment.course %>コース目 day<%= @treatment.day %></a>
+</div>
+<div class="mesuring">
+  <a>測定日：<%= @treatment.mesuring_date %></a>
+  <a>身長：<%= @treatment.height %>cm, 体重<%= @treatment.weight %>kg</a>
+  <%#体表面積%>
+</div>
+<div class="medicine1">
+  <a>薬品名：<%= @plan.medicine_name1 %>(<%= @plan.abbreviation1 %>)　用量：<%= @plan.dose1.to_s + @plan.unit1.name %></a>
+  <%# 理論値： %>
+  <a>投与量：<%= @treatment.dose1 %></a>
+  <a>理論値％：<%# 用量割合％ %>％</a>
+  <a><%= @plan.schedule1 %></a>
+</div>
+<% if @plan.medicine_name2 != "" %>
+  <div class="medicine2">
+    <a>薬品名：<%= @plan.medicine_name2 %>(<%= @plan.abbreviation2 %>)　用量：<%= @plan.dose2.to_s + @plan.unit2.name %></a>
+    <%# 理論値： %>
+    <a>投与量：<%= @treatment.dose2 %></a>
+    <a>理論値％：<%# 用量割合％ %>％</a>
+    <a><%= @plan.schedule2 %></a>
+  </div>
+<% end %>
+<% if @plan.medicine_name3 != "" %>
+  <div class="medicine3">
+    <a>薬品名：<%= @plan.medicine_name3 %>(<%= @plan.abbreviation3 %>)　用量：<%= @plan.dose3.to_s + @plan.unit3.name %></a>
+    <%# 理論値： %>
+    <a>投与量：<%= @treatment.dose3 %></a>
+    <a>理論値％：<%# 用量割合％ %>％</a>
+    <a><%= @plan.schedule3 %></a>
+  </div>
+<% end %>
+<% if @plan.medicine_name4 != "" %>
+  <div class="medicine4">
+    <a>薬品名：<%= @plan.medicine_name4 %>(<%= @plan.abbreviation4 %>)　用量：<%= @plan.dose4.to_s + @plan.unit4.name %></a>
+    <%# 理論値： %>
+    <a>投与量：<%= @treatment.dose4 %></a>
+    <a>理論値％：<%# 用量割合％ %>％</a>
+    <a><%= @plan.schedule4 %></a>
+  </div>
+<% end %>
+<% if @plan.medicine_name5 != "" %>
+  <div class="medicine5">
+    <a>薬品名：<%= @plan.medicine_name5 %>(<%= @plan.abbreviation5 %>)　用量：<%= @plan.dose5.to_s + @plan.unit5.name %></a>
+    <%# 理論値： %>
+    <a>投与量：<%= @treatment.dose5 %></a>
+    <a>理論値％：<%# 用量割合％ %>％</a>
+    <a><%= @plan.schedule5 %></a>
+  </div>
+<% end %>
+<% if @plan.medicine_name6 != "" %>
+  <div class="medicine6">
+    <a>薬品名：<%= @plan.medicine_name6 %>(<%= @plan.abbreviation6 %>)　用量：<%= @plan.dose6.to_s + @plan.unit6.name %></a>
+    <%# 理論値： %>
+    <a>投与量：<%= @treatment.dose6 %></a>
+    <a>理論値％：<%# 用量割合％ %>％</a>
+    <a><%= @plan.schedule6 %></a>
+  </div>
+<% end %>
+<% if @plan.medicine_name7 != "" %>
+  <div class="medicine7">
+    <a>薬品名：<%= @plan.medicine_name7 %>(<%= @plan.abbreviation7 %>)　用量：<%= @plan.dose7.to_s + @plan.unit7.name %></a>
+    <%# 理論値： %>
+    <a>投与量：<%= @treatment.dose7 %></a>
+    <a>理論値％：<%# 用量割合％ %>％</a>
+    <a><%= @plan.schedule7 %></a>
+  </div>
+<% end %>
+<% if @plan.medicine_name8 != "" %>
+  <div class="medicine8">
+    <a>薬品名：<%= @plan.medicine_name8 %>(<%= @plan.abbreviation8 %>)　用量：<%= @plan.dose8.to_s + @plan.unit8.name %></a>
+    <%# 理論値： %>
+    <a>投与量：<%= @treatment.dose8 %></a>
+    <a>理論値％：<%# 用量割合％ %>％</a>
+    <a><%= @plan.schedule8 %></a>
+  </div>
+<% end %>
+
+<div class="support">
+  <a>NK1：<%= @treatment.nk1 %></a>
+  <a>DEX：<%= @treatment.dex %></a>
+  <a>H1blocker：<%= @treatment.h1blocker %></a>
+  <a>H2Blocker：<%= @treatment.h2blocker %></a>
+  <a>その他支持薬：<%= @treatment.other_medicine %></a>
+</div>
+
+<p>補足：<%= @treatment.text %></p>
