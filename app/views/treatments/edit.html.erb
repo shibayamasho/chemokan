@@ -1,6 +1,6 @@
 <h1>治療歴 編集</h1>
 <%= link_to '患者詳細へ戻る', patient_path(@patient.id) %>
-<%= link_to '治療歴詳細へ戻る', patient_treatment_path(params[:id]) %>
+<%= link_to '治療歴詳細へ戻る', patient_treatment_path(params[:patient_id], params[:id]) %>
 <p>患者名：<%= @patient.name %></p>
 <p>疾患：<%= @disease.cancer.name %>　<%= @disease.other.name %>　<%= @disease.purpose.name %></p>
 <div>
