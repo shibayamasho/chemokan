@@ -1,6 +1,7 @@
 <h1>治療歴 詳細</h1>
+
 <%= link_to '患者詳細へ戻る', patient_path(@patient.id) %>
-<%= link_to '編集', edit_patient_treatment_path(params[:id]) %>
+
 <p>患者名：<%= @patient.name %></p>
 <p>疾患：<%= @disease.cancer.name %>　<%= @disease.other.name %>　<%= @disease.purpose.name %></p>
 <div>
@@ -17,6 +18,10 @@
   <a>体重<%= @treatment.weight %>kg</a>
   <a>体表面積：<%= @bsa %>㎡（Du Bois法）</a>
 </div>
+
+<p><%= link_to 'レジメン選択・測定値などを編集', "/patients/#{params[:patient_id]}/treatments/edit2/#{params[:id]}", method: :get %></p>
+<br>
+
 <div class="medicine1">
   <a>薬品名：<%= @plan.medicine_name1 %>(<%= @plan.abbreviation1 %>)　用量：<%= @plan.dose1.to_s + @plan.unit1.name %></a>
   <a>理論値：<%= @theoretical_value1 %>mg</a>
@@ -98,3 +103,7 @@
 </div>
 
 <p>補足：<%= @treatment.text %></p>
+
+<p><%= link_to '用量等を編集', edit_patient_treatment_path(params[:patient_id], params[:id]) %></p>
+
+<p><%= link_to 'この投与歴を削除', patient_treatment_path(params[:patient_id], params[:id]), method: :delete %></p>
