@@ -1,6 +1,6 @@
 class TreatmentsController < ApplicationController
   before_action :set_treatment, only: [:show, :edit]
-  
+
   def show
   end
 
@@ -14,14 +14,20 @@ class TreatmentsController < ApplicationController
     if @treatment.save
       redirect_to patient_path(params[:patient_id])
     else
-      render new
+      @patient = Patient.find(params[:patient_id])
+      render :new
     end
   end
 
-  def edit
+  def edit  #投与量を編集
   end
 
-  def update
+  def edit2  #レジメンや測定を編集
+    @patient = Patient.find(params[:patient_id])
+    @treatment = @patient.treatments.find(params[:id])
+  end
+
+  def update  #editのupdate
     @patient = Patient.find(params[:patient_id])
     @treatment = @patient.treatments.find(params[:id])
     if @treatment.update(treatment_params2)
@@ -31,9 +37,18 @@ class TreatmentsController < ApplicationController
     end
   end
 
-  def destroy
+  def update2  #edit2のupdate
     @patient = Patient.find(params[:patient_id])
     @treatment = @patient.treatments.find(params[:id])
+    if @treatment.update(treatment_params3)
+      redirect_to patient_treatment_path(params[:patient_id], params[:id])
+    else
+      render :edit2
+    end
+  end
+
+  def destroy
+    @treatment = Treatment.find(params[:id])
     @treatment.destroy
     redirect_to patient_path(params[:patient_id])
   end
@@ -55,7 +70,7 @@ class TreatmentsController < ApplicationController
     @theoretical_value8 = theoretical_value(@plan.unit8_id, @bsa, @treatment.weight, @plan.dose8)
   end
 
-  def treatment_params1
+  def treatment_params1  #create用
     params.require(:treatment).permit(
       :date, :in_out_id, :disease_id, :plan_id, :course, :day, :mesuring_date, :height, :weight
     ).merge(
@@ -63,10 +78,15 @@ class TreatmentsController < ApplicationController
       nk1: "", dex: "", h1blocker: "", h2blocker: "", other_medicine: "", text: "")
   end
   
-  def treatment_params2
+  def treatment_params2  #edit~update用
     params.require(:treatment).permit(
       :dose1, :dose2, :dose3, :dose4, :dose5, :dose6, :dose7, :dose8,
       :nk1, :dex, :h1blocker, :h2blocker, :other_medicine, :text)
+  end
+
+  def treatment_params3  #edit2~update2用
+    params.require(:treatment).permit(
+      :date, :in_out_id, :disease_id, :plan_id, :course, :day, :mesuring_date, :height, :weight)
   end
 
   def bsa(treatment)
@@ -75,9 +95,9 @@ class TreatmentsController < ApplicationController
 
   def theoretical_value(unit, bsa, weight, dose)
     if unit == 2 || unit == 7
-      bsa * dose
+      (bsa * dose).round(2)
     elsif unit == 3
-      weight * dose
+      (weight * dose).round(2)
     elsif unit == 4 || unit == 5 || unit == 8
       dose1
     else
