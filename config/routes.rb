@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: "patients#index"
   resources :patients do
     resources :treatments, only: [:show, :new, :create, :edit, :update, :destroy]
+    get 'treatments/edit2'
+    patch 'treatments/update2'
   end
   resources :plans do
     resources :diseases, only: [:create, :destroy]
