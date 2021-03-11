@@ -1,0 +1,27 @@
+<h1>患者一覧</h1>
+<%= link_to '患者新規登録', new_patient_path %>
+<br />
+
+<h3>患者検索</h3>
+<%= search_form_for @q, url: patients_search_path do |f| %>
+  <%= f.search_field :name_cont, placeholder: "患者を検索する" %>
+  <%= f.submit '検索' %>
+<% end %>
+<br />
+
+<h3>検索結果</h3>
+<div class="patients">
+  <% if @results.length != 0 %>
+    <% @results.each do |result| %>
+      <p> ---------- </p>
+      <a class="patient-name"><%= result.name %></a>
+      <a class="patient-gender">　　性別：<%= result.gender.name %></a><br />
+      <div class="patient-birthday">
+        生年月日：<%= result.birthday %>　　年齢：<%= ((Date.today.strftime("%Y%m%d").to_i - result.birthday.strftime("%Y%m%d").to_i) / 10000) %>
+      </div>
+      <%= link_to "詳細", patient_path(result.id) %>
+    <% end %>
+  <% else %>
+    該当する患者は存在しません
+  <% end %>
+</div>
