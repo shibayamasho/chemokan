@@ -4,7 +4,8 @@
 
 <h3>患者検索</h3>
 <%= search_form_for @q, url: patients_search_path do |f| %>
-  <%= f.search_field :name_cont, placeholder: "患者を検索する" %>
+  <%= f.label :name_cont, '患者名' %>
+  <%= f.search_field :name_cont, placeholder: "患者名で検索する" %>
   <%= f.submit '検索' %>
 <% end %>
 <br />
