@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     get '/treatments/edit2/:id', to: 'treatments#edit2'
     patch '/treatments/update2/:id', to: 'treatments#update2'
   end
+  get '/plans/search', to: 'plans#search'
   resources :plans do
     resources :diseases, only: [:create, :destroy]
   end
-  get '/plans/search', to: 'plans#search'
 end

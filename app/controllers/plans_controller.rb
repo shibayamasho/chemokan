@@ -7,7 +7,7 @@ class PlansController < ApplicationController
   end
 
   def search
-    @plans = @p.result.includes(:disease)
+    @results = @q.result.order(:name)
   end
 
   def show
@@ -48,7 +48,7 @@ class PlansController < ApplicationController
   private
 
   def search_plan
-    @p = Plan.ransack(params[:q])
+    @q = Plan.ransack(params[:q])
   end
 
   def set_plan
