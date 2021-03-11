@@ -47,7 +47,7 @@ class PatientsController < ApplicationController
   private
 
   def search_patient
-    @q = Plan.ransack(params[:q])
+    @q = Patient.ransack(params[:q])
   end
 
   def set_patient
