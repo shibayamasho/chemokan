@@ -1,8 +1,13 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
+  before_action :search_patient, only: [:index, :search]
 
   def index
     @patients = Patient.all.order('name ASC')
+  end
+
+  def search
+    @results = @q.result.order(:name)
   end
 
   def show
@@ -40,6 +45,10 @@ class PatientsController < ApplicationController
   end
 
   private
+
+  def search_patient
+    @q = Plan.ransack(params[:q])
+  end
 
   def set_patient
     @patient = Patient.find(params[:id])
