@@ -1,6 +1,14 @@
 <h1>レジメン一覧</h1>
 <%= link_to 'レジメン新規登録', new_plan_path %>
-<br>
+<br />
+
+<h3>レジメン検索</h3>
+<%= search_form_for @q, url: plans_search_path do |f| %>
+  <%= f.search_field :name_cont, placeholder: "レジメンを検索する" %>
+  <%= f.submit '検索' %>
+<% end %>
+<br />
+
 <h3>レジメン一覧</h3>
 <div class="plans">
   <% @plans.each do |plan| %>

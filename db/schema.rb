@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_08_093955) do
+ActiveRecord::Schema.define(version: 2021_03_08_120455) do
 
   create_table "diseases", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "cancer_id", null: false
@@ -85,6 +85,38 @@ ActiveRecord::Schema.define(version: 2021_03_08_093955) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "treatments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.date "date", null: false
+    t.integer "in_out_id", null: false
+    t.bigint "patient_id", null: false
+    t.bigint "disease_id", null: false
+    t.bigint "plan_id", null: false
+    t.integer "course", null: false
+    t.integer "day", null: false
+    t.date "mesuring_date", null: false
+    t.float "height", null: false
+    t.float "weight", null: false
+    t.float "dose1"
+    t.float "dose2"
+    t.float "dose3"
+    t.float "dose4"
+    t.float "dose5"
+    t.float "dose6"
+    t.float "dose7"
+    t.float "dose8"
+    t.string "nk1"
+    t.string "dex"
+    t.string "h1blocker"
+    t.string "h2blocker"
+    t.string "other_medicine"
+    t.text "text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["disease_id"], name: "index_treatments_on_disease_id"
+    t.index ["patient_id"], name: "index_treatments_on_patient_id"
+    t.index ["plan_id"], name: "index_treatments_on_plan_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -100,4 +132,7 @@ ActiveRecord::Schema.define(version: 2021_03_08_093955) do
   end
 
   add_foreign_key "diseases", "plans"
+  add_foreign_key "treatments", "diseases"
+  add_foreign_key "treatments", "patients"
+  add_foreign_key "treatments", "plans"
 end

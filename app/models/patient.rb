@@ -9,5 +9,5 @@ class Patient < ApplicationRecord
     validates :birthday
   end
 
-  # has_many :treatments
+  has_many :treatments
 end

@@ -1,5 +1,15 @@
 <h1>患者一覧</h1>
 <%= link_to '患者新規登録', new_patient_path %>
+<br />
+
+<h3>患者検索</h3>
+<%= search_form_for @q, url: patients_search_path do |f| %>
+  <%= f.label :name_cont, '患者名' %>
+  <%= f.search_field :name_cont, placeholder: "患者名で検索する" %>
+  <%= f.submit '検索' %>
+<% end %>
+<br />
+
 <div class="patients">
   <% @patients.each do |patient| %>
     <p> ---------- </p>

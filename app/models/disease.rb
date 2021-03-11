@@ -13,5 +13,5 @@ class Disease < ApplicationRecord
   end
 
   belongs_to :plan
-  # has_many :treatments
+  has_many :treatments
 end

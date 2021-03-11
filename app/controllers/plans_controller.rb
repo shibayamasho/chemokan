@@ -1,8 +1,13 @@
 class PlansController < ApplicationController
   before_action :set_plan, only: [:show, :edit, :update, :destroy]
+  before_action :search_plan, only: [:index, :search]
 
   def index
     @plans = Plan.all.order(:name)
+  end
+
+  def search
+    @results = @q.result.order(:name)
   end
 
   def show
@@ -41,6 +46,10 @@ class PlansController < ApplicationController
   end
 
   private
+
+  def search_plan
+    @q = Plan.ransack(params[:q])
+  end
 
   def set_plan
     @plan = Plan.find(params[:id])
