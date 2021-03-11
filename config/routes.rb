@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   resources :plans do
     resources :diseases, only: [:create, :destroy]
   end
+  get '/plans/search', to: 'plans#search'
 end
