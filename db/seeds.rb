@@ -605,6 +605,6 @@ Treatment.create(
   dex: "6.6mg",
   h1blocker: "ポララミン5mg",
   h2blocker: "なし",
-  other_medicine: "なし"
+  other_medicine: "なし",
   text: "テスト治療歴01"
 )
