@@ -58,7 +58,7 @@ class TreatmentsController < ApplicationController
     @patient = Patient.find(params[:patient_id])
     @treatment = @patient.treatments.find(params[:id])
     @plan = Plan.find(@treatment.plan_id)
-    @disease = Disease.find(@treatment.plan_id)
+    @disease = Disease.find(@treatment.disease_id)
     @bsa = bsa(@treatment)
     @theoretical_value1 = theoretical_value(@plan.unit1_id, @bsa, @treatment.weight, @plan.dose1)
     @theoretical_value2 = theoretical_value(@plan.unit2_id, @bsa, @treatment.weight, @plan.dose2)
