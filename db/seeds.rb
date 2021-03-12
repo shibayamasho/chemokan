@@ -579,16 +579,15 @@ Plan.create(
 )
 
 # 適応疾患
-#Disease.create(cancer_id: 6, other_id: 2, purpose_id: 4, plan_id: 1)
-#Disease.create(cancer_id: 6, other_id: 3, purpose_id: 4, plan_id: 1)
+Disease.create(cancer_id: 11, other_id: 4, purpose_id: 4, plan_id: 4)
 
 # 治療歴
 Treatment.create(
   date: "2020-01-01",
   in_out_id: 2,
-  patient: 1,
-  disease: 2,
-  plan: 4,
+  patient_id: 1,
+  disease_id: 1,
+  plan_id: 4,
   course: 1,
   day: 1,
   mesuring_date: "2019-12-30",
