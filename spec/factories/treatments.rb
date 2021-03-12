@@ -6,7 +6,7 @@ FactoryBot.define do
     #disease_id     {1}
     #plan_id        {1}
     course         { Faker::Number.between(from: 1, to: 999) }
-    day            { Faker::Number.between(from: , to: 7) }
+    day            { Faker::Number.between(from: 1, to: 7) }
     mesuring_date  { Faker::Date.between(from: '1900-01-01', to: '2021-03-01') }
     height         { Faker::Number.between(from: 99.0, to: 250.0) }
     weight         { Faker::Number.between(from: 10.0, to: 150.0) }
