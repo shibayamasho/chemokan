@@ -1,28 +1,34 @@
-<h1>治療歴　新規作成</h1>
-<%= link_to '患者詳細へ戻る', patient_path(@patient.id) %>
-<%= form_with(model: [@patient, @treatment], local: true) do |f| %>
-  <%= render 'shared/error_messages', model: f.object %>
-  <div class="form-wrap">
-    <div>
-      <p>治療日：
-      <%= f.date_field :date %></p>
-      <p>入外：
-      <%= f.collection_select(:in_out_id, InOut.all, :id, :name, {}) %></p>
-      <p>疾患：（保留）
-      <%= f.collection_select(:disease_id, Disease.all, :id, :cancer_id, {}) %></p>
-      <p>レジメン：
-      <%= f.collection_select(:plan_id, Plan.all, :id, :name, {}) %></p>
-      <p>コース数：
-      <%= f.text_field :course, placeholder: "半角数字" %></p>
-      <p>day
-      <%= f.text_field :day, placeholder: "半角数字" %></p>
-      <p>測定日：
-      <%= f.date_field :mesuring_date %></p>
-      <p>身長：
-      <%= f.text_field :height, placeholder: "身長" %>cm</p>
-      <p>体重：
-      <%= f.text_field :weight, placeholder: "体重" %>kg</p>
-      <p><%= f.submit "登録", class:"submit-btn" %></p>
+<div class="treatment-new1">
+  <h1>治療歴　新規作成</h1>
+  <%= link_to '患者詳細へ戻る', patient_path(@patient.id) %>
+  <%= form_with(model: [@patient, @treatment], local: true) do |f| %>
+    <%= render 'shared/error_messages', model: f.object %>
+    <div class="form-wrap">
+      <div>
+        <p>治療日：
+        <%= f.date_field :date %></p>
+        <p>入外：
+        <%= f.collection_select(:in_out_id, InOut.all, :id, :name, {}) %></p>
+        <p>疾患：（※未完成につきスルーで！）
+        <%= f.collection_select(:disease_id, Disease.all, :id, :cancer_id, {}) %></p>
+        <p>レジメン：
+        <%= f.collection_select(:plan_id, Plan.all.order(:name), :id, :name, {}) %></p>
+        <p>コース数：
+        <%= f.text_field :course, placeholder: "半角数字" %></p>
+        <p>day
+        <%= f.text_field :day, placeholder: "半角数字" %></p>
+        <p>測定日：
+        <%= f.date_field :mesuring_date %></p>
+        <p>身長：
+        <%= f.text_field :height, placeholder: "身長" %>cm</p>
+        <p>体重：
+        <%= f.text_field :weight, placeholder: "体重" %>kg</p>
+        <p><%= f.submit "登録", class:"submit-btn" %></p>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
+
+<div class="hoge">
+  ※ 投与量等の情報は、一度登録してから編集してください。
+</div>
