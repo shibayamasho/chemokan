@@ -1,14 +1,16 @@
 <%= form_with(model: [@plan, @disease], local: true) do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
   <div class="form-wrap">
-    <div>
-      <p>がん種：
-      <%= f.collection_select(:cancer_id, Cancer.all, :id, :name, {}, {class:"select-box", id:"disease-cancer"}) %></p>
-      <p>サブタイプ等：
-      <%= f.collection_select(:other_id, Other.all, :id, :name, {}, {class:"select-box", id:"disease-other"}) %></p>
-      <p>治療目的：
-      <%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class:"select-box", id:"disease-purpose"}) %></p>
-      <p><%= f.submit "登録", class:"submit-btn" %></p>
-    </div>
+    <table>
+      <tr>
+        <td>がん種</td><td>サブタイプ等</td><td>治療目的</td><td></td>
+      </tr>
+      <tr>
+        <td><%= f.collection_select(:cancer_id, Cancer.all, :id, :name, {}, {class:"select-box", id:"disease-cancer"}) %></td>
+        <td><%= f.collection_select(:other_id, Other.all, :id, :name, {}, {class:"select-box", id:"disease-other"}) %></td>
+        <td><%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class:"select-box", id:"disease-purpose"}) %></td>
+        <td><%= f.submit "登録", class:"submit-btn" %></td>
+      </tr>
+    </table>
   </div>
 <% end %>
