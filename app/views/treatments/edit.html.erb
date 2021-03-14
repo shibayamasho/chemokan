@@ -21,87 +21,220 @@
 <%= form_with(model: [@patient, @treatment], local: true) do |f| %>
   <%= render 'shared/error_messages', model: f.object %>
   <div class="form-wrap">
-    <div class="medicine1">
-      <a>薬品名：<%= @plan.medicine_name1 %>(<%= @plan.abbreviation1 %>)　用量：<%= @plan.dose1.to_s + @plan.unit1.name %></a>
-      <a>理論値：<span id="theoretical-value1" data-json="<%= @theoretical_value1 %>"><%= @theoretical_value1 %></span>mg</a>
-      <a>投与量：<%= f.text_field :dose1, id: "treatment-dose1", placeholder: "投与量" %>mg</a>
-      <a>理論値％：<span id="theoretical-percentage1"></span></a>
-      <a><%= @plan.schedule1 %></a>
-    </div>
-    <% if @plan.medicine_name2 != "" %>
-      <div class="medicine2">
-        <a>薬品名：<%= @plan.medicine_name2 %>(<%= @plan.abbreviation2 %>)　用量：<%= @plan.dose2.to_s + @plan.unit2.name %></a>
-        <a>理論値：<span id="theoretical-value2" data-json="<%= @theoretical_value2 %>"><%= @theoretical_value2 %></span>mg</a>
-        <a>投与量：<%= f.text_field :dose2, id: "treatment-dose2", placeholder: "投与量" %>mg</a>
-        <a>理論値％：<span id="theoretical-percentage2"></span></a>
-        <a><%= @plan.schedule2 %></a>
-      </div>
-    <% end %>
-    <% if @plan.medicine_name3 != "" %>
-      <div class="medicine3">
-        <a>薬品名：<%= @plan.medicine_name3 %>(<%= @plan.abbreviation3 %>)　用量：<%= @plan.dose3.to_s + @plan.unit3.name %></a>
-        <a>理論値：<span id="theoretical-value3" data-json="<%= @theoretical_value3 %>"><%= @theoretical_value3 %></span>mg</a>
-        <a>投与量：<%= f.text_field :dose3, id: "treatment-dose3", placeholder: "投与量" %>mg</a>
-        <a>理論値％：<span id="theoretical-percentage3"></span></a>
-        <a><%= @plan.schedule3 %></a>
-      </div>
-    <% end %>
-    <% if @plan.medicine_name4 != "" %>
-      <div class="medicine4">
-        <a>薬品名：<%= @plan.medicine_name4 %>(<%= @plan.abbreviation4 %>)　用量：<%= @plan.dose4.to_s + @plan.unit4.name %></a>
-        <a>理論値：<span id="theoretical-value4" data-json="<%= @theoretical_value4 %>"><%= @theoretical_value4 %></span>mg</a>
-        <a>投与量：<%= f.text_field :dose4, id: "treatment-dose4", placeholder: "投与量" %>mg</a>
-        <a>理論値％：<span id="theoretical-percentage4"></span></a>
-        <a><%= @plan.schedule4 %></a>
-      </div>
-    <% end %>
-    <% if @plan.medicine_name5 != "" %>
-      <div class="medicine5">
-        <a>薬品名：<%= @plan.medicine_name5 %>(<%= @plan.abbreviation5 %>)　用量：<%= @plan.dose5.to_s + @plan.unit5.name %></a>
-        <a>理論値：<span id="theoretical-value5" data-json="<%= @theoretical_value5 %>"><%= @theoretical_value5 %></span>mg</a>
-        <a>投与量：<%= f.text_field :dose5, id: "treatment-dose5", placeholder: "投与量" %>mg</a>
-        <a>理論値％：<span id="theoretical-percentage5"></span></a>
-        <a><%= @plan.schedule5 %></a>
-      </div>
-    <% end %>
-    <% if @plan.medicine_name6 != "" %>
-      <div class="medicine6">
-        <a>薬品名：<%= @plan.medicine_name6 %>(<%= @plan.abbreviation6 %>)　用量：<%= @plan.dose6.to_s + @plan.unit6.name %></a>
-        <a>理論値：<span id="theoretical-value6" data-json="<%= @theoretical_value6 %>"><%= @theoretical_value6 %></span>mg</a>
-        <a>投与量：<%= f.text_field :dose6, id: "treatment-dose6", placeholder: "投与量" %>mg</a>
-        <a>理論値％：<span id="theoretical-percentage6"></span></a>
-        <a><%= @plan.schedule6 %></a>
-      </div>
-    <% end %>
-    <% if @plan.medicine_name7 != "" %>
-      <div class="medicine7">
-        <a>薬品名：<%= @plan.medicine_name7 %>(<%= @plan.abbreviation7 %>)　用量：<%= @plan.dose7.to_s + @plan.unit7.name %></a>
-        <a>理論値：<span id="theoretical-value7" data-json="<%= @theoretical_value7 %>"><%= @theoretical_value7 %></span>mg</a>
-        <a>投与量：<%= f.text_field :dose7, id: "treatment-dose7", placeholder: "投与量" %>mg</a>
-        <a>理論値％：<span id="theoretical-percentage7"></span></a>
-        <a><%= @plan.schedule7 %></a>
-      </div>
-    <% end %>
-    <% if @plan.medicine_name8 != "" %>
-      <div class="medicine8">
-        <a>薬品名：<%= @plan.medicine_name8 %>(<%= @plan.abbreviation8 %>)　用量：<%= @plan.dose8.to_s + @plan.unit8.name %></a>
-        <a>理論値：<span id="theoretical-value8" data-json="<%= @theoretical_value8 %>"><%= @theoretical_value8 %></span>mg</a>
-        <a>投与量：<%= f.text_field :dose8, id: "treatment-dose8", placeholder: "投与量" %>mg</a>
-        <a>理論値％：<span id="theoretical-percentage8"></span></a>
-        <a><%= @plan.schedule8 %></a>
-      </div>
-    <% end %>
 
-    <div class="support">
-      <p>催吐性リスク：<%= @plan.emetic.name %>　</p>
-      <p>NK1：<%= f.text_field :nk1 %>　</p>
-      <p>DEX：<%= f.text_field :dex %>　</p>
-      <p>H1blocker：<%= f.text_field :h1blocker %>　</p>
-      <p>H2Blocker：<%= f.text_field :h2blocker %>　</p>
-      <p>その他支持薬：<%= f.text_field :other_medicine %></p>
-    </div>
+    <table>
+      <tr>
+        <th>薬品名</th>
+        <th>略号</th>
+        <th>用量</th>
+        <th>理論値</th>
+        <th>投与量</th>
+        <th>理論値％</th>
+        <th>投与日</th>
+      </tr>
 
-    <p>補足：<%= f.text_area :text %></p>
+      <tr class="medicine1">
+        <td><%= @plan.medicine_name1 %></td>
+        <td><%= @plan.abbreviation1 %></td>
+        <td class="plan-dose"><%= @plan.dose1.to_s + @plan.unit1.name %></td>
+        <td class="theoretical-value">
+          <span id="theoretical-value1" data-json="<%= @theoretical_value1 %>">
+            <%= @theoretical_value1 %>
+          </span>mg
+        </td>
+        <td class="treatment-dose"><%= f.text_field :dose1, id: "treatment-dose1", placeholder: "投与量" %>mg</td>
+        <td class="theoretical-percentage">
+          <span id="theoretical-percentage1">
+            <% if @treatment.dose1 != nil %>
+              <%= (@treatment.dose1 * 100 / @theoretical_value1).round(1) %>％
+            <% end %>
+          </span>
+        </td>
+        <td><%= @plan.schedule1 %></td>
+      </tr>
+
+      <% if @plan.medicine_name2 != "" %>
+        <tr class="medicine2">
+          <td><%= @plan.medicine_name2 %></td>
+          <td><%= @plan.abbreviation2 %></td>
+          <td class="plan-dose"><%= @plan.dose2.to_s + @plan.unit2.name %></td>
+          <td class="theoretical-value">
+            <span id="theoretical-value2" data-json="<%= @theoretical_value2 %>">
+            <%= @theoretical_value2 %>
+            </span>mg
+          </td>
+          <td class="treatment-dose"><%= f.text_field :dose2, id: "treatment-dose2", placeholder: "投与量" %>mg</td>
+          <td class="theoretical-percentage">
+            <span id="theoretical-percentage2">
+              <% if @treatment.dose2 != nil %>
+                <%= (@treatment.dose2 * 100 / @theoretical_value2).round(1) %>％
+              <% end %>
+            </span>
+          </td>
+          <td><%= @plan.schedule2 %></td>
+        </tr>
+      <% end %>
+
+      <% if @plan.medicine_name3 != "" %>
+        <tr class="medicine3">
+          <td><%= @plan.medicine_name3 %></td>
+          <td><%= @plan.abbreviation3 %></td>
+          <td class="plan-dose"><%= @plan.dose3.to_s + @plan.unit3.name %></td>
+          <td class="theoretical-value">
+            <span id="theoretical-value3" data-json="<%= @theoretical_value3 %>">
+            <%= @theoretical_value3 %>
+            </span>mg
+          </td>
+          <td class="treatment-dose"><%= f.text_field :dose3, id: "treatment-dose3", placeholder: "投与量" %>mg</td>
+          <td class="theoretical-percentage">
+            <span id="theoretical-percentage3">
+              <% if @treatment.dose3 != nil %>
+                <%= (@treatment.dose3 * 100 / @theoretical_value3).round(1) %>％
+              <% end %>
+            </span>
+          </td>
+          <td><%= @plan.schedule3 %></td>
+        </tr>
+      <% end %>
+
+      <% if @plan.medicine_name4 != "" %>
+        <tr class="medicine4">
+          <td><%= @plan.medicine_name4 %></td>
+          <td><%= @plan.abbreviation4 %></td>
+          <td class="plan-dose"><%= @plan.dose4.to_s + @plan.unit4.name %></td>
+          <td class="theoretical-value">
+            <span id="theoretical-value4" data-json="<%= @theoretical_value4 %>">
+            <%= @theoretical_value4 %>
+            </span>mg
+          </td>
+          <td class="treatment-dose"><%= f.text_field :dose4, id: "treatment-dose4", placeholder: "投与量" %>mg</td>
+          <td class="theoretical-percentage">
+            <span id="theoretical-percentage4">
+              <% if @treatment.dose4 != nil %>
+                <%= (@treatment.dose4 * 100 / @theoretical_value4).round(1) %>％
+              <% end %>
+            </span>
+          </td>
+          <td><%= @plan.schedule4 %></td>
+        </tr>
+      <% end %>
+
+      <% if @plan.medicine_name5 != "" %>
+        <tr class="medicine5">
+          <td><%= @plan.medicine_name5 %></td>
+          <td><%= @plan.abbreviation5 %></td>
+          <td class="plan-dose"><%= @plan.dose5.to_s + @plan.unit5.name %></td>
+          <td class="theoretical-value">
+            <span id="theoretical-value5" data-json="<%= @theoretical_value5 %>">
+            <%= @theoretical_value5 %>
+            </span>mg
+          </td>
+          <td class="treatment-dose"><%= f.text_field :dose5, id: "treatment-dose5", placeholder: "投与量" %>mg</td>
+          <td class="theoretical-percentage">
+            <span id="theoretical-percentage5">
+              <% if @treatment.dose5 != nil %>
+                <%= (@treatment.dose5 * 100 / @theoretical_value5).round(1) %>％
+              <% end %>
+            </span>
+          </td>
+          <td><%= @plan.schedule5 %></td>
+        </tr>
+      <% end %>
+
+      <% if @plan.medicine_name6 != "" %>
+        <tr class="medicine6">
+          <td><%= @plan.medicine_name6 %></td>
+          <td><%= @plan.abbreviation6 %></td>
+          <td class="plan-dose"><%= @plan.dose6.to_s + @plan.unit6.name %></td>
+          <td class="theoretical-value">
+            <span id="theoretical-value6" data-json="<%= @theoretical_value6 %>">
+            <%= @theoretical_value6 %>
+            </span>mg
+          </td>
+          <td class="treatment-dose"><%= f.text_field :dose6, id: "treatment-dose6", placeholder: "投与量" %>mg</td>
+          <td class="theoretical-percentage">
+            <span id="theoretical-percentage6">
+              <% if @treatment.dose6 != nil %>
+                <%= (@treatment.dose6 * 100 / @theoretical_value6).round(1) %>％
+              <% end %>
+            </span>
+          </td>
+          <td><%= @plan.schedule6 %></td>
+        </tr>
+      <% end %>
+
+      <% if @plan.medicine_name7 != "" %>
+        <tr class="medicine7">
+          <td><%= @plan.medicine_name7 %></td>
+          <td><%= @plan.abbreviation7 %></td>
+          <td class="plan-dose"><%= @plan.dose7.to_s + @plan.unit7.name %></td>
+          <td class="theoretical-value">
+            <span id="theoretical-value7" data-json="<%= @theoretical_value7 %>">
+            <%= @theoretical_value7 %>
+            </span>mg
+          </td>
+          <td class="treatment-dose"><%= f.text_field :dose7, id: "treatment-dose7", placeholder: "投与量" %>mg</td>
+          <td class="theoretical-percentage">
+            <span id="theoretical-percentage7">
+              <% if @treatment.dose7 != nil %>
+                <%= (@treatment.dose7 * 100 / @theoretical_value7).round(1) %>％
+              <% end %>
+            </span>
+          </td>
+          <td><%= @plan.schedule7 %></td>
+        </tr>
+      <% end %>
+
+      <% if @plan.medicine_name8 != "" %>
+        <tr class="medicine8">
+          <td><%= @plan.medicine_name8 %></td>
+          <td><%= @plan.abbreviation8 %></td>
+          <td class="plan-dose"><%= @plan.dose8.to_s + @plan.unit8.name %></td>
+          <td class="theoretical-value">
+            <span id="theoretical-value8" data-json="<%= @theoretical_value8 %>">
+            <%= @theoretical_value8 %>
+            </span>mg
+          </td>
+          <td class="treatment-dose"><%= f.text_field :dose8, id: "treatment-dose8", placeholder: "投与量" %>mg</td>
+          <td class="theoretical-percentage">
+            <span id="theoretical-percentage8">
+              <% if @treatment.dose8 != nil %>
+                <%= (@treatment.dose8 * 100 / @theoretical_value8).round(1) %>％
+              <% end %>
+            </span>
+          </td>
+          <td><%= @plan.schedule8 %></td>
+        </tr>
+      <% end %>
+
+    </table>
+
+    <h4>支持療法</h4>
+    <table class="support">
+      <tr>
+        <td>催吐性リスク</td><td><%= @plan.emetic.name %></td>
+      </tr>
+      <tr>
+        <td>NK1</td><td><%= f.text_field :nk1 %></td>
+      </tr>
+      <tr>
+        <td>DEX</td><td><%= f.text_field :dex %></td>
+      </tr>
+      <tr>
+        <td>H1blocker</td><td><%= f.text_field :h1blocker %></td>
+      </tr>
+      <tr>
+        <td>H2blocker</td><td><%= f.text_field :h2blocker %></td>
+      </tr>
+      <tr>
+        <td>その他支持薬</td><td><%= f.text_field :other_medicine %></td>
+      </tr>
+    </table>
+
+    <div>
+      補足：<br />
+      <%= f.text_area :text, class:"treatment-text" %>
+    </div>
 
     <%= f.submit "更新" %>
   </div>
