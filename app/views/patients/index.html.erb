@@ -1,23 +1,28 @@
 <h1>患者一覧</h1>
-<%= link_to '患者新規登録', new_patient_path %>
-<br />
+<div class="patient-new">
+  <%= link_to '患者新規登録', new_patient_path %>
+</div>
 
-<h3>患者検索</h3>
-<%= search_form_for @q, url: patients_search_path do |f| %>
-  <%= f.label :name_cont, '患者名' %>
-  <%= f.search_field :name_cont, placeholder: "患者名で検索する" %>
-  <%= f.submit '検索' %>
-<% end %>
-<br />
+<%= render 'search' %>
 
+<h3>登録患者一覧</h3>
 <div class="patients">
+  <div class="patient-items">
+    <ul class="patient-item-lists">
+      <li class="patient-name">患者名</li>
+      <li class="patient-gender">性別</li>
+      <li class="patient-age">年齢</li>
+    </ul>
+  </div>
   <% @patients.each do |patient| %>
-    <p> ---------- </p>
-    <a class="patient-name"><%= patient.name %></a>
-    <a class="patient-gender">　　性別：<%= patient.gender.name %></a><br />
-    <div class="patient-birthday">
-      生年月日：<%= patient.birthday %>　　年齢：<%= ((Date.today.strftime("%Y%m%d").to_i - patient.birthday.strftime("%Y%m%d").to_i) / 10000) %>
+    <div class="patient">
+      <%= link_to (patient_path(patient.id)) do %>
+        <ul class="patient-item-lists">
+          <li class="patient-name"><%= patient.name %><li>
+          <li class="patient-gender"><%= patient.gender.name %>性</li>
+          <li class="patient-age"><%= ((Date.today.strftime("%Y%m%d").to_i - patient.birthday.strftime("%Y%m%d").to_i) / 10000) %>歳<li>
+        </ul>
+      <% end %>
     </div>
-    <%= link_to "詳細", patient_path(patient.id) %>
   <% end %>
 </div>
