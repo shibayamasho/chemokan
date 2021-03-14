@@ -1,37 +1,51 @@
-<h1>患者 詳細</h1>
 <div class="patient-info">
-  <div class="patient-name">
-    <p>患者名： <%= @patient.name %></p>
+  <div class="patient-details">
+    <h3>患者 詳細</h3>
+    <div class="patient-name">
+      <p>患者名：<%= @patient.name %></p>
+    </div>
+    <div class="patient-gender">
+      <p>性別：<%= @patient.gender.name %></p>
+    </div>
+    <div class="patient-birthday">
+      <p>生年月日：<%= @patient.birthday %></p>
+      <p>年齢：<%= ((Date.today.strftime("%Y%m%d").to_i - @patient.birthday.strftime("%Y%m%d").to_i) / 10000) %>歳</p>
+    </div>
+    <br />
+    <div class="patient-text">
+      <p>その他患者情報</p>
+      <%= @patient.text %>
+    </div>
+    <br />
+    <div class="patient-edit">
+      <%= link_to "患者情報を編集", edit_patient_path(@patient.id) %>
+    </div>
+    <div class="patient-destroy">
+      <%= link_to "患者を削除", patient_path(@patient.id), method: :delete %>
+    </div>
   </div>
-  <div class="patient-gender">
-    <p>性別： <%= @patient.gender.name %></p>
+
+  <div class="patient-treatments">
+    <h3>治療歴一覧</h3>
+    <div class="treatment-new">
+      <%= link_to "治療歴を新規作成", new_patient_treatment_path(@patient.id) %>
+    </div>
+
+    <% if @treatments.length == 0 %>まだ治療歴は登録されていません<% end %>
+
+    <% @treatments.each do |treatment| %>
+      <%= link_to patient_treatment_path(@patient.id, treatment.id) do %>
+        <div class="treatment-items">
+          <ul class="treatment-item-lists">
+            <li><%= treatment.date %></li>
+            <li><%= treatment.in_out.name %></li>
+            <li><%= treatment.plan.name %></li>
+            <li><%= treatment.course %>コース目</li>
+            <li>day<%= treatment.day %></li>
+        </div>
+      <% end %>
+    <% end %>
+
   </div>
-  <div class="patient-birthday">
-    <p>生年月日： <%= @patient.birthday %></p>
-    <p>年齢： <%= ((Date.today.strftime("%Y%m%d").to_i - @patient.birthday.strftime("%Y%m%d").to_i) / 10000) %></p>
-  </div>
-  <div class="patient-text">
-    <p>その他患者情報<p>
-    <%= @patient.text %>
-  </div>
+  
 </div>
-<div class="patient-edit">
-  <%= link_to "編集", edit_patient_path(@patient.id) %>
-</div>
-<div class="patient-destroy">
-  <%= link_to "削除", patient_path(@patient.id), method: :delete %>
-</div>
-<br>
-<%= link_to "治療歴を新規作成", new_patient_treatment_path(@patient.id) %>
-<br>
-<h3>治療歴一覧</h3>
-<% @treatments.each do |treatment| %>
-  <div class="treatment">
-    <%= link_to '詳細', patient_treatment_path(@patient.id, treatment.id) %>
-    <a><%= treatment.date %>　</a>
-    <a><%= treatment.in_out.name %>　</a>
-    <a><%= treatment.plan.name %>　</a>
-    <a><%= treatment.course %>コース目</a>
-    <a>day<%= treatment.day %></a>
-  </div>
-<% end %>

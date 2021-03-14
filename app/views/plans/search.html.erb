@@ -1,18 +1,13 @@
-<h3>レジメン検索</h3>
-<%= search_form_for @q, url: plans_search_path do |f| %>
-  <%= f.search_field :name_cont, placeholder: "レジメンを検索する" %>
-  <%= f.submit '検索' %>
-<% end %>
-<br />
+<%= render 'search' %>
 
 <h3>検索結果</h3>
 <div class="plans">
   <% if @results.length != 0 %>
-    <% @results.each do |result| %>
+    <% @results.each do |plan| %>
       <div class="plan">
-        <%= link_to "詳細", plan_path(result.id) %>
-        <a>　</a>
-        <a class="plan-name"><%= result.name %></a>
+        <ul class="plan-item-lists">
+          <li class="plan-name"><%= link_to plan.name, plan_path(plan.id) %></li>
+        </ul>
       </div>
     <% end %>
   <% else %>

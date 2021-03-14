@@ -1,0 +1,7 @@
+<div class="search-patient">
+  <%= search_form_for @q, url: patients_search_path do |f| %>
+    <%= f.label :name_cont, '患者を検索' %>
+    <%= f.search_field :name_cont, placeholder: "患者名で検索する" %>
+    <%= f.submit '検索' %>
+  <% end %>
+</div>
