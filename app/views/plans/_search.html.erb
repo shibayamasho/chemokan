@@ -1,0 +1,7 @@
+<div class="search-plan">
+  <%= search_form_for @q, url: plans_search_path do |f| %>
+    <%= f.label "レジメンを検索" %>
+    <%= f.search_field :name_cont, placeholder: "レジメン名を検索する" %>
+    <%= f.submit '検索' %>
+  <% end %>
+</div>
