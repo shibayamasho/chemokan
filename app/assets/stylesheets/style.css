@@ -93,7 +93,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background-color: rgb(0, 0, 0, 0.1);
+  background-color: lightgrey;
 }
 
 
@@ -135,7 +135,7 @@ main {
 }
 
 .patient:hover {
-  background-color: rgb(0, 0, 0, 0.1);
+  background-color: lightgrey;
 }
 
 .patient-item-lists {
@@ -157,7 +157,7 @@ main {
 }
 
 .plan:hover {
-  background-color: rgb(0, 0, 0, 0.1);
+  background-color: lightgrey;
 }
 
 
@@ -231,7 +231,7 @@ main {
 }
 
 .treatment-items:hover {
-  background-color: rgb(0, 0, 0, 0.1);
+  background-color: lightgrey;
 }
 
 .treatment-item-lists {
