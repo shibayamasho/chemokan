@@ -143,11 +143,11 @@ https://chemokan.herokuapp.com/
 | name レジメン名             | string       | null: false    |
 | period 1クールの日数        | integer      | null: false    |
 | emetic_id 催吐性           | integer      | null: false    |
-| nk1 NK1拮抗薬              | string       |                |
-| 5ht3blocker 5HT3拮抗薬     | string       |                |
+| nk1 NK1受容体拮抗薬         | string       |                |
+| 5ht3 5HT3受容体拮抗薬       | string       |                |
 | dex デキサメタゾン          | string       |                |
-| h1blocker H1拮抗薬         | string       |                |
-| h2blocker H2拮抗薬         | string       |                |
+| h1blocker H1受容体拮抗薬    | string       |                |
+| h2blocker H2受容体拮抗薬    | string       |                |
 | other_medicine その他支持薬 | string       |                |
 | text その他の情報           | text         |                |
 | medicine_name1~8 薬品名    | string       | 1: null: false |
@@ -178,11 +178,11 @@ https://chemokan.herokuapp.com/
 | height 身長                | float      | null: false                   |
 | weight 体重                | float      | null: false                   |
 | dose1~8 投与量             | float      |                               |
-| nk1 NK1拮抗薬              | string     |                               |
-| 5ht3blocker 5HT3拮抗薬     | string     |                              |
+| nk1 NK1受容体拮抗薬         | string     |                               |
+| 5ht3 5HT3受容体拮抗薬       | string     |                              |
 | dex デキサメタゾン          | string     |                               |
-| h1blocker H1拮抗薬         | string     |                               |
-| h2blocker H2拮抗薬         | string     |                               |
+| h1blocker H1受容体拮抗薬    | string     |                               |
+| h2blocker H2受容体拮抗薬    | string     |                               |
 | other_medicine その他支持薬 | string     |                               |
 | text メモ                  | text       |                               |
 
