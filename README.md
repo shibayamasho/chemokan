@@ -39,7 +39,69 @@ https://chemokan.herokuapp.com/
 
 
 # 利用方法
-作成中
+
+#### まずはログイン
+![ログイン](https://user-images.githubusercontent.com/78073669/111755867-ec165000-88dc-11eb-9209-e17dd7bf10f0.gif)
+
+ログインをするとTOPページ（患者一覧）へ。サイドバーから患者一覧、レジメン一覧に遷移できる。
+
+
+
+#### レジメン新規登録画面
+![レジメン新規登録画面](https://user-images.githubusercontent.com/78073669/111756493-9aba9080-88dd-11eb-8508-70599bc778ed.gif)
+
+#### レジメン新規作成
+![レジメン新規作成](https://user-images.githubusercontent.com/78073669/111756634-cb022f00-88dd-11eb-9024-96be09aa8f06.gif)
+
+必要事項を入力し登録ボタンを押すと、レジメンが新規登録される。
+
+
+
+#### 適応疾患登録
+![適応疾患登録](https://user-images.githubusercontent.com/78073669/111756774-f258fc00-88dd-11eb-9645-f785c3ae8667.gif)
+
+登録したレジメンに、適応疾患を登録することができる。
+
+
+
+#### 患者新規登録
+![患者新規作成](https://user-images.githubusercontent.com/78073669/111756898-14527e80-88de-11eb-8189-30baef7569ab.gif)
+
+患者新規登録をクリックし、必要事項を入力して登録ボタンを押すと、患者を新規登録できる。
+
+
+
+#### 治療歴新規登録画面
+![治療歴新規登録画面](https://user-images.githubusercontent.com/78073669/111757047-3fd56900-88de-11eb-9e7f-d9d95180d599.gif)
+
+患者詳細画面から、個々の患者の治療歴が登録できる治療歴新規作成をクリックすると、治療歴新規登録画面に遷移する。
+
+
+
+#### 治療歴新規作成
+![治療歴新規作成](https://user-images.githubusercontent.com/78073669/111757276-7e6b2380-88de-11eb-9da9-7ce4d50cbc54.gif)
+
+必要事項を入力し登録ボタンを押すと、治療歴が新規登録できる。薬品の用量などは、一度登録したあと、編集画面から入力を行う。
+
+
+
+#### 治療歴編集
+![理論値計算](https://user-images.githubusercontent.com/78073669/111757446-aeb2c200-88de-11eb-8373-699110345e47.gif)
+
+治療歴の編集画面にて、薬品の用量を入力する。入力した用量の数値に応じて、理論値％が自動で計算される。
+
+
+
+![治療歴編集](https://user-images.githubusercontent.com/78073669/111757620-dbff7000-88de-11eb-9ced-6231137669f3.gif)
+
+必要事項を入力し更新ボタンを押すと、治療歴が更新される。
+
+
+
+#### 治療歴一覧
+![治療歴一覧](https://user-images.githubusercontent.com/78073669/111757641-e28de780-88de-11eb-982c-e0d37f9daa78.gif)
+
+患者ごとに登録された治療歴を一覧で確認することができる。
 
 
 
@@ -94,6 +156,11 @@ https://chemokan.herokuapp.com/
 
 
 # データベース設計
+
+## ER図
+![ER](https://user-images.githubusercontent.com/78073669/111758167-81b2df00-88df-11eb-871e-948821d70ca8.png)
+
+
 
 ## テーブル設計
 
