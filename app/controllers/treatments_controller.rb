@@ -99,7 +99,7 @@ class TreatmentsController < ApplicationController
     elsif unit == 3
       (weight * dose).round(2)
     elsif unit == 4 || unit == 5 || unit == 8
-      dose1
+      dose
     else
       "--"
     end
